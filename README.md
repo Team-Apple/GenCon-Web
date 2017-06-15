@@ -8,6 +8,10 @@
 
 ## How to run
 
+`$ bundle install`
+
+then
+
 `$ rails s`
 
-Then access to `localhost:3000`.
+then access to `localhost:3000`.
