@@ -6,10 +6,12 @@
 
 * Rails: 5.1.1
 
-* yarn 0.24.6
+* yarn: 0.24.6
+
 
 # How to install yarn?
 `$ brew install yarn`
+
 
 ## How to run
 
