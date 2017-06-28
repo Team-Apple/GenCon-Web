@@ -6,6 +6,8 @@
 
 * Rails: 5.1.1
 
+*yarn 0.24.6
+
 ## How to run
 
 `$ bundle install`
