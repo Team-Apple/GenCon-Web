@@ -22,6 +22,3 @@ then
 `$ rails s`
 
 then access to `localhost:3000`.
-
-
-test
