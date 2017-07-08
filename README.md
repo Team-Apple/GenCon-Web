@@ -27,7 +27,7 @@ then access to `localhost:3000`.
 
 ## First
 Set environment variable.  
-`$ export SLACK_API=our token`
+`$ export SLACK_TOKEN=our token`
   
 include example  
 ```
