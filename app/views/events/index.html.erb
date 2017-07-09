@@ -1,0 +1,40 @@
+<nav>
+  <div class="nav-wrapper orange">
+    <div id="cal-title" class="brand-logo center"></div>
+    <ul class="left hide-on-med-and-down">
+      <li>
+				<a onclick="calPrev()">
+					<i class="material-icons">keyboard_arrow_left</i>
+				</a>
+			</li>
+			<li>
+				<a onclick="calNext()">
+					<i class="material-icons">keyboard_arrow_right</i>
+				</a>
+			</li>
+			<li>
+				<a class="tooltipped" data-position="bottom" data-delay="150" data-tooltip="Today" onclick="calToday()">
+					<i class="material-icons">wifi</i>
+				</a>
+			</li>
+    </ul>
+
+		<ul class="right hide-on-med-and-down">
+			<li>
+				<a class="tooltipped" data-position="bottom" data-delay="150" data-tooltip="New" onclick="openModal()">
+					<i class="material-icons">add</i>
+				</a>
+			</li>
+			<li>
+				<a class="tooltipped" data-position="bottom" data-delay="150" data-tooltip="Switch view" onclick="switchView()">
+					<i id="view-icon" class="material-icons">view_comfy</i>
+				</a>
+			</li>
+		</ul>
+  </div>
+</nav>
+<div id='calendar'></div>
+
+<div id="form" class="modal modal-fixed-footer">
+  <%= render 'form' %>
+</div>

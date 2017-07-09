@@ -33,8 +33,18 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'kaminari'
+gem 'rspec-rails'
+
 #Materialize
 gem 'materialize-sass'
+gem 'sprockets'
+
+#erb内でcoffeeをかける
+gem 'coffeebeans'
+
+#jquery
+gem 'jquery-rails'
 
 #Fullcalendar
 gem 'fullcalendar-rails'
@@ -45,6 +55,9 @@ gem 'slack-api'
 
 #Do something with IRB
 gem 'rb-readline'
+
+#crontab
+gem 'whenever', require: false
 
 #Webpack
 gem 'webpacker'

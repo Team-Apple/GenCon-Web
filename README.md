@@ -1,4 +1,4 @@
-# README
+#README
 
 ## Environment
 
@@ -8,19 +8,28 @@
 
 * yarn : 0.24.6
 
+## Service
 
-# How to install yarn?
-`$ brew install yarn`
-
+Event registration and setting for those. Works in GenCon System.
 
 ## How to run
 
+It requires yarn. Install it.
+`$ brew install yarn`
+
+Install all packages.
 `$ bundle install`
 
-then
+Database migration.
+`$ rake db:migrate`
 
+If you make some test, run this.
+`$ rake test`
+
+Stand up the server.
 `$ rails s`
 
+<<<<<<< Updated upstream
 then access to `localhost:3000`.
 
 # GenConAPI
@@ -89,3 +98,6 @@ example
 puts main.get_exchange("USD")
 puts main.get_exchange("ALL")
 ```
+=======
+then access to `localhost:3000`. Let's develop something amazing.
+>>>>>>> Stashed changes

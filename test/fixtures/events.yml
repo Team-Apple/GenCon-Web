@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  notif_at: 2017-06-22 12:03:19
+  repeat: false
+  repeat_value: 1
+  repeat_unit: 1
+
+two:
+  notif_at: 2017-06-22 12:03:19
+  repeat: false
+  repeat_value: 1
+  repeat_unit: 1
