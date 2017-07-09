@@ -1,4 +1,4 @@
-#README
+# README
 
 ## Environment
 
@@ -15,18 +15,23 @@ Event registration and setting for those. Works in GenCon System.
 ## How to run
 
 It requires yarn. Install it.
+
 `$ brew install yarn`
 
 Install all packages.
+
 `$ bundle install`
 
 Database migration.
+
 `$ rake db:migrate`
 
 If you make some test, run this.
+
 `$ rake test`
 
 Stand up the server.
+
 `$ rails s`
 
 then access to `localhost:3000`.
@@ -97,6 +102,3 @@ example
 puts main.get_exchange("USD")
 puts main.get_exchange("ALL")
 ```
-=======
-then access to `localhost:3000`. Let's develop something amazing.
->>>>>>> Stashed changes
