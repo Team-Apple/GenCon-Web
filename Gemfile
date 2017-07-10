@@ -36,6 +36,7 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'kaminari'
 gem 'rspec-rails'
+gem 'nokogiri'
 
 #Materialize
 gem 'materialize-sass'
@@ -59,9 +60,6 @@ gem 'rb-readline'
 
 #crontab
 gem 'whenever', require: false
-
-#Webpack
-gem 'webpacker'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
