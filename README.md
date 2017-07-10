@@ -14,10 +14,6 @@ Event registration and setting for those. Works in GenCon System.
 
 ## How to run
 
-It requires yarn. Install it.
-
-`$ brew install yarn`
-
 Install all packages.
 
 `$ bundle install`
