@@ -33,7 +33,7 @@ Stand up the server.
 then access to `localhost:3000`.
 
 # GenConAPI
-
+<font color="return"></font>
 ## First
 Set environment variable.  
 `$ export SLACK_TOKEN=our token`
@@ -63,7 +63,7 @@ main.send_notif("test message")
 **get_weather(_String_)**  
 **return (_String_)**
 
-You must choose argument from below. 　
+You must choose argument from below. 　    
 *"東京地方" => "東京地方の天気予報概況"*　　　  
 *"関東甲信地方" => "関東甲信地方の天気予報概況"*　　  
 *"ALL" => "すべての地方の天気予報概況"*　　   
@@ -81,12 +81,22 @@ puts main.get_weather("東京地方")
 ```
 
 ***
-**get_exchange(_String_)**  
+**get_exchange(_String_，_String_)**  
 **return (_String_)**
 
-Get exchange rate from  
+Get JPY exchange rate from  
 <https://info.finance.yahoo.co.jp/fx/>.  
-You must choose argument from below.  
+Or BTC exchange rate from  
+<https://blockchain.info/ja/ticker>.  
+
+You must choose second argument from below.  
+
+*"JPY_T" => "日本円の為替レートを文章として取得"*    
+*"JPY_R" => "日本円の為替レートを表示用として取得*    
+*"BTC_T" => "ビットコインの為替レートを文章として取得"*    
+*"BTC_R" => "ビットコインの為替レートを表示用として取得"*   
+
+You must choose first argument from below if you chose "JPY_X" in second argument.  
 
 *"USD" => "米ドル"*      
 *"EUR" => "ユーロ"*  
@@ -99,10 +109,34 @@ You must choose argument from below.
 *"CNH" => "人民元"*　　  
 *"ALL" => "上記のレート全て取得"*　　　  
 
-You can get all exchange rate if you choose *"ALL"*.  
+Or you chose "BTC_X".  
+  
+*"USD" => "米ドル"*  
+*"ISK" => "アイスランドクローナ"*  
+*"HKD" => "香港ドル"*  
+*"TWD" => "新台湾ドル"*  
+*"CHF" => "スイスフラン"*  
+*"EUR" => "ユーロ"*  
+*"DKK" => "デンマーククローネ"*  
+*"CLP" => "チリペソ"*  
+*"CAD" => "カナダドル"*  
+*"INR" => "インドルピー"*  
+*"CNY" => "人民元"*  
+*"THB" => "タイバーツ"*  
+*"AUD" => "豪ドル"*  
+*"SGD" => "シンガポールドル"*  
+*"KRW" => "韓国ウォン"*  
+*"JPY" => "日本円"*  
+*"PLN" => "ポーランドズウォティ"*  
+*"GBP" => "英ポンド"*  
+*"SEK" => "スウェーデンクローナ"*  
+*"NZD" => "ニュージーランドドル"*  
+*"BRL" => "ブラジルレアル"*  
+*"RUB" => "ロシアルーブル"*   
+*"ALL" => "上記のレート全て取得"*　　　 
 
 example
 ```
-puts main.get_exchange("USD")
-puts main.get_exchange("ALL")
+puts main.get_exchange("USD","JPY_T)
+puts main.get_exchange("ALL",BTC_R)
 ```
