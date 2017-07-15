@@ -60,9 +60,16 @@ main.send_notif("test message")
 ```
 
 ***
-**get_weather(_void_)**  
+**get_weather(_String_)**  
 **return (_String_)**
 
+You must choose argument from below. 　
+*"東京地方" => "東京地方の天気予報概況"*　　　  
+*"関東甲信地方" => "関東甲信地方の天気予報概況"*　　  
+*"ALL" => "すべての地方の天気予報概況"*　　   
+*"N" => "すべての地方の天気予報概況（【と】を含む）"*    
+  
+  
 Get the general weather situation in Tokyo form  
 <http://weather.livedoor.com/weather_hacks/>.  
 This function use `text_operation.py` because the general weather situation has some 【 and 】.  
@@ -70,7 +77,7 @@ This function use `text_operation.py` because the general weather situation has 
 
 example
 ```
-puts main.get_weather
+puts main.get_weather("東京地方")
 ```
 
 ***
@@ -89,7 +96,8 @@ You must choose argument from below.
 *"CAD" => "カナダドル"*    
 *"CHF" => "スイスフラン"*  
 *"ZAR" => "ランド"*  
-*"CNH" => "人民元"*  
+*"CNH" => "人民元"*　　  
+*"ALL" => "上記のレート全て取得"*　　　  
 
 You can get all exchange rate if you choose *"ALL"*.  
 
