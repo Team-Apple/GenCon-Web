@@ -28,21 +28,19 @@ module GenConAPI
         Slack.chat_postMessage(text: text, username: BOT_NAME, channel: CHANNEL)
     end
 
-    def get_weather()
+    def get_weather(local)
         uri = URI.parse('http://weather.livedoor.com/forecast/webservice/json/v1?city=130010')
         json = Net::HTTP.get(uri)
         result = JSON.parse(json)
         text =  result['description']['text'].delete("\n")
         text = text.gsub(" ", "")  
-        text = `python3 text_operation.py #{text}`
-        return text
-        """
-        p result['forecasts'][0]['telop']
-        p result['forecasts'][0]['temperature']['max']['celsius']
-        p result['forecasts'][1]['telop'] #明日の天気
-        p result['forecasts'][1]['temperature']['min']['celsius'] #明日の最低気温
+
+        if local =="N"
+            return text
+        else
+            text = `python3 text_operation.py #{text} #{local}`
+            return text
         end
-        "
     end
 
     def get_exchange(currency)
@@ -71,12 +69,11 @@ module GenConAPI
 end
 
 #Use example
-"""
 class Main
   include GenConAPI
 end
 
 main = Main.new
-puts main.get_exchange("ALL")
-main.send_notif(main.get_exchange("ALL"))
-"""
+puts main.get_weather("ALL")
+#puts main.get_exchange("ALL")
+#main.send_notif(main.get_exchange("ALL"))
