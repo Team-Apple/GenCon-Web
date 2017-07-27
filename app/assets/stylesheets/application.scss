@@ -1,14 +1,18 @@
- @import "materialize";
- @import "fullcalendar";
- @import "./*";
+@import "materialize/components/color";
+$primary-color: color("teal", "base") !default;
+$primary-dark-color: color("teal", "darken-3") !default;
+$secondary-color: color("cyan", "accent-4") !default;
+@import "materialize";
+@import "fullcalendar";
+@import "./*";
 
- #loading-effect {
+#loading-effect {
   position: absolute;
   top: 35%;
   left: 50%;
- }
+}
 
- #loader-bg {
+#loader-bg {
   display: none;
   position: fixed;
   width: 100%;
@@ -17,4 +21,4 @@
   left: 0px;
   background: rgba(255, 255, 255, 0.5);
   z-index: 1;
- }
+}
