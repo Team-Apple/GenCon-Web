@@ -10,17 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170701063503) do
+ActiveRecord::Schema.define(version: 20170715051148) do
 
   create_table "events", force: :cascade do |t|
-    t.datetime "notif_at"
-    t.boolean "repeat"
-    t.integer "repeat_value"
-    t.integer "repeat_unit"
-    t.integer "api_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "title"
+    t.string "memo"
+    t.date "start_at_date"
+    t.time "start_at_time"
+    t.date "end_at_date"
+    t.time "end_at_time"
   end
 
 end

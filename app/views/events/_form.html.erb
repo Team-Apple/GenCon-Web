@@ -2,49 +2,37 @@
   <h3>Form</h3>
 <%= form_with(model: @event, local: true) do |form| %>
   <div class="input-field">
-    <i class="material-icons prefix">title</i>
     <%= form.text_field :title, required: true %>
     <%= form.label :title %>
   </div>
 
-  <div class="input-field datetime_select">
-    <i class="material-icons prefix">event</i>
-    <%= form.datetime_select :notif_at, id: :event_notif_at, :date_separator => '/' %>
-    <%= form.label :notif_at %>
+  <div class="input-field">
+    <%= form.date_field :start_at_date, required: true, readonly: true, id: "start_at_date" %>
+    <%= form.label :start_at_date, "Start at", class: "active" %>
   </div>
 
-  <%= form.label :repeat %>
-  <div class="switch">
-    <label>
-      Off
-      <input type="checkbox" name="event[repeat]">
-      <span class="lever"></span>
-      On
-    </label>
+  <div class="input-field">
+    <%= form.date_field :end_at_date, required: true, readonly: true, id: "end_at_date" %>
+    <%= form.label :end_at_date, "End at", class: "active" %>
   </div>
 
-  <div class="row">
-    <div class="col s4">
-      <%= form.label :repeat_value %>
-      <div class="input-field">
-        <%= form.number_field :repeat_value, id: :event_repeat_value %>
-      </div>
-    </div>
-    <div class="col s4">
-      <%= form.label :repeat_unit %>
-      <div class="input-field">
-        <%= form.select :repeat_unit, Event.repeat_units.keys.to_a, {} %>
-      </div>
-    </div>
+  <!-- <div class="input-field datetime_select">
+    <%= form.datetime_select :end_at, id: :event_end_at, :date_separator => '/' %>
+    <%= form.label :end_at %>
+  </div> -->
+
+  <div class="input-field">
+    <%= form.text_area :memo, :class => 'materialize-textarea' %>
+    <%= form.label :memo %>
   </div>
 </div>
 <div class="modal-footer">
-  <a class="modal-action modal-close waves-effect waves-orange btn-flat">Cancel
+  <a class="modal-action modal-close waves-effect waves-orange btn-flat right" onclick="unselect()">Cancel
     <i class="material-icons right">clear</i>
   </a>
 
-  <button id="submit" class="waves-effect waves-green btn-flat" type="submit" name="action">Submit
+  <button id="submit" class="btn waves-effect waves-green left" type="submit" name="action">Submit
     <i class="material-icons right">send</i>
   </button>
-<% end %>
 </div>
+<% end %>

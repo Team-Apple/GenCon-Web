@@ -1,19 +1,21 @@
 global = this
 global.changeTitleDate = ->
   date = $('#calendar').fullCalendar 'getDate'
-  console.log date
   $('#cal-title').empty()
   if $('#calendar').fullCalendar('getView').name is 'agendaWeek'
     $('#cal-title').append date.format('YYYY  M/D') + ' - ' + date.add(6, 'days').format('D')
   else
     $('#cal-title').append date.format('YYYY MMMM')
 
+global.unselect = ->
+  $('#calendar').fullCalendar 'unselect'
+
 global.openModal = ->
   $('select').material_select()
   modalW = $('.modal').width()
   $('.datetime_select .select-wrapper').css
     'display': 'inline-block'
-    'width': (modalW / 10) + 'px'
+    'width': (modalW / 6) + 'px'
 
   $('#form').modal
     inDuration: 100
@@ -73,6 +75,30 @@ $(document).ready ->
       else return true
 
     select: (start, end, jsEvent) ->
+      $('#calendar').fullCalendar 'loading', 'true'
+      start_at_date = document.getElementById 'start_at_date'
+      end_at_date = document.getElementById 'end_at_date'
+
+      start_at_date.value = start.format('YYYY-MM-DD')
+      end_at_date.value = end.format('YYYY-MM-DD')
+      # console.log start.format('X')
+      # start_at_date.value = start
+      # formats = ['YYYY', 'M', 'D', 'HH', 'mm']
+      # for i in [1..5]
+      #   selects = document.getElementById '_start_at_' + i + 'i'
+      #   for s, index in selects.options
+      #     if s.value == start.format(formats[i - 1])
+      #       s.selected = true
+      #       break
+      #
+      # for i in [1..5]
+      #   selects = document.getElementById '_end_at_' + i + 'i' # character 'i' is not variable, just ID
+      #   for s, index in selects.options
+      #     if s.value == end.format(formats[i - 1])
+      #       s.selected = true
+      #       break
+
+      $('#calendar').fullCalendar 'loading', 'false'
       openModal()
 
     monthNames: [
@@ -124,7 +150,7 @@ $(document).ready ->
       '金'
       '土'
     ]
-    
+
   changeTitleDate()
 
 window.onunload = ->

@@ -69,6 +69,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:title, :notif_at, :repeat, :repeat_value, :repeat_unit)
+      params.require(:event).permit(:title, :start_at_date, :start_at_time, :end_at_date, :end_at_time, :memo)
     end
 end
