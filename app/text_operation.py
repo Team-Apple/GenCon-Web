@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import sys
+import make_sentence
 
 def change_ab(text,local):
     start = text.find("【" + local + "】")
@@ -17,6 +18,10 @@ def change_ab(text,local):
         text_list = list(text)
         del text_list[start:len(text_list)]
         text = "".join(text_list)
+    text_list = text.split("。")
+    text = text_list[0]
+    if "雨" in text:
+        text = make_sentence.make_sentence('rain', '', '')
     return text
 
 def change_all_ab(text):

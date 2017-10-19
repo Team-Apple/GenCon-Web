@@ -32,9 +32,10 @@ def make_sentence(mode, title, memo):
 def say(text):
     print(out)
 
-check_error(sys.argv)
-mode = sys.argv[1]
-title = sys.argv[2]
-memo = sys.argv[3]
-out = make_sentence(mode, title, memo)
-say(out)
+if __name__ == "__main__":
+    check_error(sys.argv)
+    mode = sys.argv[1]
+    title = sys.argv[2]
+    memo = sys.argv[3]
+    out = make_sentence(mode, title, memo)
+    say(out)
