@@ -1,10 +1,12 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  protect_from_forgery :except => [:create]
 
   # GET /events
   # GET /events.json
   def index
     @events = Event.all
+    @event = Event.new
   end
 
   # GET /events/1
@@ -69,6 +71,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:title, :start_at_date, :start_at_time, :end_at_date, :end_at_time, :memo)
+      params.require(:event).permit(:title, :start_at, :end_at, :memo, :speak, :morn_or_night, :priority)
     end
 end

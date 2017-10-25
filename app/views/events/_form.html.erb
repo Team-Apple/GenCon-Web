@@ -1,38 +1,41 @@
-<div class="modal-content">
-  <h3>Form</h3>
 <%= form_with(model: @event, local: true) do |form| %>
-  <div class="input-field">
-    <%= form.text_field :title, required: true %>
-    <%= form.label :title %>
+  <div class="modal-content">
+    <h3>Form</h3>
+
+    <div class="row">
+      <div class="col s10 input-field">
+        <%= form.text_field :title, required: true %>
+        <%= form.label :title %>
+      </div>
+
+      <div class="col s10 input-field">
+        <%= form.text_area :memo, :class => 'materialize-textarea' %>
+        <%= form.label :memo %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field datetime_select col s10">
+        <%= form.datetime_select :start_time, :use_month_numbers => true, :use_two_digit_numbers => true, :minute_step => 5, :date_separator => '/' %>
+        <%= form.label :start_time, "開始" %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field datetime_select col s10">
+        <%= form.datetime_select :end_time, :use_month_numbers => true, :use_two_digit_numbers => true, :minute_step => 30, :date_separator => '/' %>
+        <%= form.label :end_time, "終了" %>
+      </div>
+    </div>
   </div>
 
-  <div class="input-field">
-    <%= form.date_field :start_at_date, required: true, readonly: true, id: "start_at_date" %>
-    <%= form.label :start_at_date, "Start at", class: "active" %>
+  <div class="modal-footer">
+    <a class="modal-action modal-close btn-flat right" onclick="unselect()">Cancel
+      <i class="material-icons right">clear</i>
+    </a>
+
+    <button id="submit" class="btn waves-effect waves-green left" type="submit" name="action">Submit
+      <i class="material-icons right">send</i>
+    </button>
   </div>
-
-  <div class="input-field">
-    <%= form.date_field :end_at_date, required: true, readonly: true, id: "end_at_date" %>
-    <%= form.label :end_at_date, "End at", class: "active" %>
-  </div>
-
-  <!-- <div class="input-field datetime_select">
-    <%= form.datetime_select :end_at, id: :event_end_at, :date_separator => '/' %>
-    <%= form.label :end_at %>
-  </div> -->
-
-  <div class="input-field">
-    <%= form.text_area :memo, :class => 'materialize-textarea' %>
-    <%= form.label :memo %>
-  </div>
-</div>
-<div class="modal-footer">
-  <a class="modal-action modal-close waves-effect waves-orange btn-flat right" onclick="unselect()">Cancel
-    <i class="material-icons right">clear</i>
-  </a>
-
-  <button id="submit" class="btn waves-effect waves-green left" type="submit" name="action">Submit
-    <i class="material-icons right">send</i>
-  </button>
-</div>
 <% end %>

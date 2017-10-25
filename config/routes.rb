@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  resources :events
+  get 'dashboard/home'
 
-  root :to => 'events#index'
+  resources :events
+  resources :announcements
+  resources :tasks
+
+  root :to => 'dashboard#home'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

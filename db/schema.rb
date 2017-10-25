@@ -10,17 +10,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170715051148) do
+ActiveRecord::Schema.define(version: 20171007040319) do
+
+  create_table "announcements", force: :cascade do |t|
+    t.string "title"
+    t.date "date"
+    t.boolean "timing", default: true
+    t.integer "mode", default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "events", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "title"
     t.string "memo"
-    t.date "start_at_date"
-    t.time "start_at_time"
-    t.date "end_at_date"
-    t.time "end_at_time"
+    t.datetime "end_at"
+    t.datetime "start_at"
+    t.integer "priority"
+  end
+
+  create_table "tasks", force: :cascade do |t|
+    t.string "title"
+    t.datetime "start_from"
+    t.datetime "deadline"
+    t.string "memo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

@@ -3,6 +3,7 @@ $primary-color: color("teal", "base") !default;
 $primary-dark-color: color("teal", "darken-3") !default;
 $secondary-color: color("cyan", "accent-4") !default;
 @import "materialize";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
 @import "fullcalendar";
 @import "./*";
 
@@ -10,6 +11,11 @@ $secondary-color: color("cyan", "accent-4") !default;
   position: absolute;
   top: 35%;
   left: 50%;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
 }
 
 #loader-bg {

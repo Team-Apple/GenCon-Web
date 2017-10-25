@@ -68,8 +68,8 @@ You must choose argument from below. 　
 *"関東甲信地方" => "関東甲信地方の天気予報概況"*　　  
 *"ALL" => "すべての地方の天気予報概況"*　　   
 *"N" => "すべての地方の天気予報概況（【と】を含む）"*    
-  
-  
+
+
 Get the general weather situation in Tokyo form  
 <http://weather.livedoor.com/weather_hacks/>.  
 This function use `text_operation.py` because the general weather situation has some 【 and 】.  
@@ -94,7 +94,7 @@ You must choose second argument from below.
 *"JPY_T" => "日本円の為替レートを文章として取得"*    
 *"JPY_R" => "日本円の為替レートを表示用として取得*    
 *"BTC_T" => "ビットコインの為替レートを文章として取得"*    
-*"BTC_R" => "ビットコインの為替レートを表示用として取得"*   
+*"BTC_R" => "ビットコインの為替レートを表示用として取得"*  
 
 You must choose first argument from below if you chose "JPY_X" in second argument.  
 
@@ -110,7 +110,7 @@ You must choose first argument from below if you chose "JPY_X" in second argumen
 *"ALL" => "上記のレート全て取得"*　　　  
 
 Or you chose "BTC_X".  
-  
+
 *"USD" => "米ドル"*  
 *"ISK" => "アイスランドクローナ"*  
 *"HKD" => "香港ドル"*  
@@ -133,7 +133,7 @@ Or you chose "BTC_X".  
 *"NZD" => "ニュージーランドドル"*  
 *"BRL" => "ブラジルレアル"*  
 *"RUB" => "ロシアルーブル"*   
-*"ALL" => "上記のレート全て取得"*　　　 
+*"ALL" => "上記のレート全て取得"*　　　
 
 example
 ```

@@ -1,40 +1,31 @@
-<nav>
-  <div class="nav-wrapper">
-    <div id="cal-title" class="brand-logo center"></div>
-    <ul class="left">
-      <li>
-				<a onclick="calPrev()">
-					<i class="material-icons">keyboard_arrow_left</i>
-				</a>
-			</li>
-			<li>
-				<a onclick="calNext()">
-					<i class="material-icons">keyboard_arrow_right</i>
-				</a>
-			</li>
-			<li>
-				<a class="tooltipped" data-position="bottom" data-delay="150" data-tooltip="Today" onclick="calToday()">
-					<i class="material-icons">today</i>
-				</a>
-			</li>
-    </ul>
+<div class="row">
+  <div class="col s12 l6">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title activator">GenConからのお知らせ<i class="material-icons right">settings</i></span>
+      </div>
 
-		<ul class="right">
-			<li>
-				<a class="tooltipped" data-position="bottom" data-delay="150" data-tooltip="New" onclick="openModal()">
-					<i class="material-icons">add</i>
-				</a>
-			</li>
-			<li>
-				<a class="tooltipped" data-position="bottom" data-delay="150" data-tooltip="Switch view" onclick="switchView()">
-					<i id="view-icon" class="material-icons">view_comfy</i>
-				</a>
-			</li>
-		</ul>
+      <div class="card-stacked">
+        <div class="card-tabs">
+          <ul class="tabs tabs-fixed-width">
+            <li class="tab"><a href="#tab1">今日</a></li>
+            <li class="tab"><a href="#tab2">明日</a></li>
+          </ul>
+        </div>
+
+        <div class="card-content">
+          <div id="tab1">
+            <ul class="collection">
+              <li class="collection-item">ゴミ出し</li>
+              <li class="collection-item">天気</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card-action">
+          <a class="btn waves-effect waves-light">NEW<i class="material-icons right">add</i></a>
+        </div>
+      </div>
+    </div>
   </div>
-</nav>
-<div id='calendar'></div>
-
-<div id="form" class="modal modal-fixed-footer">
-  <%= render 'form' %>
 </div>

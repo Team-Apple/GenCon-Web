@@ -12,8 +12,6 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require jquery
-//= require jquery_ujs
 //= require materialize-sprockets
 //= require moment
 //= require fullcalendar

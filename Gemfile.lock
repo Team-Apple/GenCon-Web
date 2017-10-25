@@ -66,6 +66,7 @@ GEM
       coffee-script
     concurrent-ruby (1.0.5)
     concurrent-ruby (1.0.5-java)
+    device (0.0.0)
     diff-lcs (1.3)
     erubi (1.6.0)
     eventmachine (1.2.3)
@@ -142,6 +143,8 @@ GEM
     nokogiri (1.8.0-x86-mingw32)
       mini_portile2 (~> 2.2.0)
     pg (0.21.0)
+    pg (0.21.0-x64-mingw32)
+    pg (0.21.0-x86-mingw32)
     public_suffix (2.0.5)
     puma (3.9.1)
     puma (3.9.1-java)
@@ -268,6 +271,7 @@ DEPENDENCIES
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   coffeebeans
+  device
   fullcalendar-rails
   jbuilder (~> 2.5)
   jquery-rails
