@@ -38,19 +38,12 @@ gem 'kaminari'
 gem 'rspec-rails'
 gem 'nokogiri'
 
-#Materialize
+# #Materialize
 gem 'materialize-sass'
 gem 'sprockets'
 
 #erb内でcoffeeをかける
 gem 'coffeebeans'
-
-#jquery
-gem 'jquery-rails'
-
-#Fullcalendar
-gem 'fullcalendar-rails'
-gem 'momentjs-rails'
 
 #Slack API
 gem 'slack-api'

@@ -1,10 +1,10 @@
 <% provide(:title, "Dashboard") %>
 
 <div class="row">
-  <div class="col m6 s6 l6 xl6">
+  <div class="col m6 s12 l6 xl6 announcements">
     <div class="card">
       <div class="card-content">
-        <span class="card-title activator">GenConからのお知らせ<i class="material-icons right">settings</i></span>
+        <span class="card-title activator">お知らせ<i class="material-icons right">settings</i></span>
       </div>
 
       <div class="card-stacked">
@@ -37,9 +37,102 @@
         </div>
 
         <div class="card-action">
+          <%= link_to new_announcement_path, class: "btn waves-effect waves-light" do %>
+            NEW
+            <i class="material-icons right">add</i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col m6 s12 l6 xl6 events">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title activator">イベント<i class="material-icons right">settings</i></span>
+      </div>
+
+      <div class="card-stacked">
+        <div class="card-tabs">
+          <ul class="tabs tabs-fixed-width">
+            <li class="tab"><a href="#todays_events">今日</a></li>
+            <li class="tab"><a href="#tomorrows_events">明日</a></li>
+          </ul>
+        </div>
+
+        <div class="card-content">
+          <div id="todays_events">
+            <% unless @todays_events.empty? %>
+              <ul class="collection">
+                <% @todays_events.each do |ev| %>
+                  <li class="collection-item"><%= render ev.title %></li>
+                <% end %>
+              </ul>
+            <% end %>
+          </div>
+          <div class="tomorrows_events">
+            <% unless @tomorrows_events.empty? %>
+              <ul class="collection">
+                <% @tomorrows_events.each do |ev| %>
+                  <li class="collection-item"> <%= render ev.title %></li>
+                <% end %>
+              </ul>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="card-action">
+          <%= link_to new_event_path, remote: true, class: "btn waves-effect waves-light" do %>
+            NEW
+            <i class="material-icons right">add</i>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col m6 s12 l6 xl6 tasks">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title activator">タスク<i class="material-icons right">settings</i></span>
+      </div>
+
+      <div class="card-stacked">
+        <div class="card-tabs">
+          <ul class="tabs tabs-fixed-width">
+            <li class="tab"><a href="#todays_tasks">今日</a></li>
+            <li class="tab"><a href="#tomorrows_tasks">明日</a></li>
+          </ul>
+        </div>
+
+        <div class="card-content">
+          <div id="todays_tasks">
+            <% unless @todays_start_tasks.empty? %>
+              <ul class="collection">
+                <% @todays_tasks.each do |ts| %>
+                  <li class="collection-item"><%= render ts.title %></li>
+                <% end %>
+              </ul>
+            <% end %>
+          </div>
+          <div class="tomorrows_tasks">
+            <% unless @tomorrows_start_tasks.empty? %>
+              <ul class="collection">
+                <% @tomorrows_tasks.each do |ts| %>
+                  <li class="collection-item"> <%= render ts.title %></li>
+                <% end %>
+              </ul>
+            <% end %>
+          </div>
+        </div>
+
+        <div class="card-action">
           <a class="btn waves-effect waves-light">NEW<i class="material-icons right">add</i></a>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+<div id="form" class="load_point modal bottom-sheet">
 </div>

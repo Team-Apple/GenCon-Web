@@ -1,5 +1,8 @@
 {
   "name": "Gencon",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "fullcalendar": "^3.6.2",
+    "jquery": "^3.2.1"
+  }
 }

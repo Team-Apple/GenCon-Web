@@ -4,7 +4,7 @@ $primary-dark-color: color("teal", "darken-3") !default;
 $secondary-color: color("cyan", "accent-4") !default;
 @import "materialize";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
-@import "fullcalendar";
+@import "fullcalendar/dist/fullcalendar";
 @import "./*";
 
 #loading-effect {

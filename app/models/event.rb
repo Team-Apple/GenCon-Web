@@ -1,3 +1,10 @@
 class Event < ApplicationRecord
-  enum repeat_unit: {days: 0, weeks: 1, months: 2, years: 3}
+  def self.get_two_days_events(start)
+    two_days = Event.where(start_at: start.beginning_of_day..start.tomorrow.end_of_day)
+
+    current_events = two_days.where(start_at: start.beginning_of_day..start.end_of_day)
+    next_events = two_days.where(start_at: start.tomorrow.beginning_of_day..start.tomorrow.end_of_day)
+
+    return {"current" => current_events, "next" => next_events}
+  end
 end
