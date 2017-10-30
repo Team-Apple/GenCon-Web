@@ -140,3 +140,53 @@ example
 puts main.get_exchange("USD","JPY_T)
 puts main.get_exchange("ALL",BTC_R)
 ```
+# make_sentence.py
+
+**make_sentence(_String_(event, s_task, b_task, c_task), _String_(title), _String_(memo))**  
+**return (_String_)**
+
+This script makes a talk sentence on Raspberry Pi.
+First argument is only "event", "s_task", "b_task" or "c_task".
+The sentence's expression depends on arguments.
+"event" will spoken before the day.
+"s_task", "b_task" and "c_task" is user's task in schedule.
+"s_task" is a task beginning message.
+"b_task" is a day before deadline message.
+"c_task" is just on deadline message.
+
+Second argument is event or task title.
+third argument is memo about event or task.
+If there isn't memo, set "" argument.
+
+example(in console)
+```
+$python3 make_sentence.py event 会議 ""
+会議、明日ありますので気をつけてください
+
+$ python3 make_sentence.py s_task 実験レポート 資料はUSBの中
+今日から開始するタスクがあります。実験レポートメモを読み上げます。資料はUSBの中
+
+$ python3 make_sentence.py b_task 実験レポート 資料はUSBの中
+明日実験レポートの提出です！メモは、資料はUSBの中
+
+$ python3 make_sentence.py c_task 実験レポート 資料はUSBの中
+実験レポートは持ちましたか？資料はUSBの中
+```
+
+The message is chosen from _first argument_.txt(event.txt, s_task.txt, b_task.txt, c_task.txt, memo.txt).
+If you want to add variations, edit it and add.
+"-" is replaced argument.
+
+example(in console)
+```
+$ cat event.txt 
+明日は-があります。
+明日、-がありますよ。
+-、明日ありますので気をつけてください。
+
+$ cat memo.txt 
+メモを読み上げます。-
+メモは、-
+メモの内容は、-
+-
+```
