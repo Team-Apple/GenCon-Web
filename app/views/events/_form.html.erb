@@ -1,44 +1,57 @@
 <%= form_with(model: @event, local: true) do |form| %>
+  <% if form.object.new_record? %>
+    <% provide :form_title, "New" %>
+    <% field_activated = "" %>
+  <% else %>
+    <% provide :form_title, "Edit" %>
+    <% provide :flld_st_d, @event.start_at_date %>
+    <% provide :flld_st_t, @event.start_at_time.to_s(:time_short) %>
+    <% provide :flld_ed_d, @event.end_at_date %>
+    <% provide :flld_ed_t, @event.end_at_time.to_s(:time_short) %>
+    <% field_activated = "active" %>
+  <% end %>
   <div class="modal-content">
-    <h3>Form</h3>
+    <h3><%= yield :form_title %></h3>
 
     <div class="row">
       <div class="col s9 input-field">
         <%= form.text_field :title, required: true %>
-        <%= form.label :title, "タイトル" %>
+        <%= form.label :title, "タイトル", class: field_activated %>
       </div>
 
       <div class="col s3 input-field">
         <%= form.select :priority, options_for_select(Event.priorities.keys.to_a, 'normal') %>
-        <%= form.label :priority, "優先度" %>
+        <%= form.label :priority, "優先度", class: field_activated %>
       </div>
     </div>
 
     <div class="row">
       <div class="date-picker col s4">
         <%= form.label :start_at_date, "開始日" %>
-        <input type="date" name="event[start_at_date]" class="datepicker">
+        <input type="date" name="event[start_at_date]" class="datepicker" value=<%= yield :flld_st_d %> >
       </div>
       <div class="time-picker col s4">
         <%= form.label :start_at_time, "開始時間" %>
-        <input type="time" name="event[start_at_time]" class="timepicker">
+        <input type="time" name="event[start_at_time]" class="timepicker" value=<%= yield :flld_st_t %> >
       </div>
     </div>
 
     <div class="row">
       <div class="date-picker col s4">
-        <%= form.label :start_at_date, "終了日" %>
-        <input type="date" name="event[end_at_date]" class="datepicker">
+        <%= form.label :end_at_date, "終了日" %>
+        <input type="date" name="event[end_at_date]" class="datepicker" value=<%= yield :flld_ed_d %> >
       </div>
       <div class="time-picker col s4">
-        <%= form.label :start_at_time, "終了時間" %>
-        <input type="time" name="event[end_at_time]" class="timepicker">
+        <%= form.label :end_at_time, "終了時間" %>
+        <input type="time" name="event[end_at_time]" class="timepicker" value=<%= yield :flld_ed_t %> >
       </div>
     </div>
 
-    <div class="col s10 input-field">
-      <%= form.text_area :memo, :class => 'materialize-textarea' %>
-      <%= form.label :memo, "メモ" %>
+    <div class="row">
+      <div class="col s10 input-field">
+        <%= form.text_area :memo, :class => 'materialize-textarea' %>
+        <%= form.label :memo, "メモ", class: field_activated %>
+      </div>
     </div>
 
     <!-- <div class="col s10 range-field">

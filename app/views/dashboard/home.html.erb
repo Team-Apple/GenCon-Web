@@ -65,12 +65,16 @@
             <% unless @todays_events.empty? %>
               <ul class="collection">
                 <% @todays_events.each do |ev| %>
+                  <% provide :priority_color, "cyan accent-4" %>
                   <li class="collection-item avatar">
                     <i class="material-icons circle teal darken-3">event</i>
                     <span class="title"><%= ev.title %></span>
                     <p>
                       <%= ev.start_at_time.to_s(:time_short) %> ~ <%= ev.end_at_time.to_s(:time_short) %>
                     </p>
+                    <%= link_to edit_event_path(ev), remote: true, class: 'btn-floating secondary-content' do %>
+                      <i class="material-icons">edit</i>
+                    <% end %>
                   </li>
                 <% end %>
               </ul>
