@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171029143500) do
+ActiveRecord::Schema.define(version: 20171031154409) do
 
   create_table "announcements", force: :cascade do |t|
     t.string "title"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20171029143500) do
     t.datetime "updated_at", null: false
     t.string "title"
     t.string "memo"
-    t.datetime "end_at_date"
+    t.date "end_at_date"
     t.date "start_at_date"
     t.integer "priority", default: 1
     t.time "start_at_time"
