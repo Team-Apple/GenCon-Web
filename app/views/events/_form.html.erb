@@ -1,6 +1,7 @@
 <%= form_with(model: @event, local: true) do |form| %>
   <% if form.object.new_record? %>
     <% provide :form_title, "New" %>
+    <% selected = "normal" %>
     <% field_activated = "" %>
   <% else %>
     <% provide :form_title, "Edit" %>
@@ -8,6 +9,7 @@
     <% provide :flld_st_t, @event.start_at_time.to_s(:time_short) %>
     <% provide :flld_ed_d, @event.end_at_date %>
     <% provide :flld_ed_t, @event.end_at_time.to_s(:time_short) %>
+    <% selected = @event.priority %>
     <% field_activated = "active" %>
   <% end %>
   <div class="modal-content">
@@ -20,8 +22,8 @@
       </div>
 
       <div class="col s3 input-field">
-        <%= form.select :priority, options_for_select(Event.priorities.keys.to_a, 'normal') %>
-        <%= form.label :priority, "優先度", class: field_activated %>
+        <%= form.select :priority, Event.priorities.keys.to_a, {}, selected: selected %>
+        <%= form.label :priority, "優先度" %>
       </div>
     </div>
 
@@ -60,12 +62,10 @@
   </div>
 
   <div class="modal-footer">
-    <a class="modal-action modal-close btn-flat right">Cancel
-      <i class="material-icons right">clear</i>
+    <a class="modal-action modal-close btn-flat left">Cancel
     </a>
 
-    <button id="submit" class="btn waves-effect waves-green left" type="submit" name="action">Submit
-      <i class="material-icons right">send</i>
+    <button id="submit" class="btn waves-effect waves-green right" type="submit" name="action">Save
     </button>
   </div>
 <% end %>

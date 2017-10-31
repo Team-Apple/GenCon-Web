@@ -9,4 +9,15 @@ class Event < ApplicationRecord
 
     return {"current" => current_events, "next" => next_events}
   end
+
+  def priority_color
+    case priority_before_type_cast
+    when 0
+      return 'green'
+    when 1
+      return 'yellow'
+    when 2
+      return 'red'
+    end
+  end
 end

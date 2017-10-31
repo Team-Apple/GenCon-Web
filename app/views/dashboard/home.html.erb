@@ -65,9 +65,15 @@
             <% unless @todays_events.empty? %>
               <ul class="collection">
                 <% @todays_events.each do |ev| %>
-                  <% provide :priority_color, "cyan accent-4" %>
+                  <% if ev.priority == 'normal' %>
+                    <% provide :priority_color, 'cyan accent-4' %>
+                  <% elsif ev.priority == 'high' %>
+                    <% provide :priority_color, 'red' %>
+                  <% else %>
+                    <% provide :priority_color, 'teal darken-3' %>
+                  <% end %>
                   <li class="collection-item avatar">
-                    <i class="material-icons circle teal darken-3">event</i>
+                    <i class="material-icons circle <%= ev.priority_color %>">event</i>
                     <span class="title"><%= ev.title %></span>
                     <p>
                       <%= ev.start_at_time.to_s(:time_short) %> ~ <%= ev.end_at_time.to_s(:time_short) %>
@@ -84,8 +90,15 @@
             <% unless @tomorrows_events.empty? %>
               <ul class="collection">
                 <% @tomorrows_events.each do |ev| %>
+                  <% if ev.priority == 'normal' %>
+                    <% provide :priority_color, 'cyan accent-4' %>
+                  <% elsif ev.priority == 'high' %>
+                    <% provide :priority_color, 'red' %>
+                  <% else %>
+                    <% provide :priority_color, 'teal darken-3' %>
+                  <% end %>
                   <li class="collection-item avatar">
-                    <i class="material-icons circle teal darken-3">event</i>
+                    <i class="material-icons circle <%= yield :priority_color %>">event</i>
                     <span class="title"><%= ev.title %></span>
                     <p>
                       <%= ev.start_at_time.to_s(:time_short) %> ~ <%= ev.end_at_time.to_s(:time_short) %>
@@ -100,7 +113,6 @@
         <div class="card-action">
           <%= link_to new_event_path, remote: true, class: "btn waves-effect waves-light" do %>
             NEW
-            <i class="material-icons right">add</i>
           <% end %>
         </div>
       </div>
