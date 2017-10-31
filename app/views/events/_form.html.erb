@@ -3,34 +3,51 @@
     <h3>Form</h3>
 
     <div class="row">
-      <div class="col s10 input-field">
+      <div class="col s9 input-field">
         <%= form.text_field :title, required: true %>
-        <%= form.label :title %>
+        <%= form.label :title, "タイトル" %>
       </div>
 
-      <div class="col s10 input-field">
-        <%= form.text_area :memo, :class => 'materialize-textarea' %>
-        <%= form.label :memo %>
+      <div class="col s3 input-field">
+        <%= form.select :priority, options_for_select(Event.priorities.keys.to_a, 'normal') %>
+        <%= form.label :priority, "優先度" %>
       </div>
     </div>
 
     <div class="row">
-      <div class="input-field datetime_select col s10">
-        <%= form.datetime_select :start_time, :use_month_numbers => true, :use_two_digit_numbers => true, :minute_step => 5, :date_separator => '/' %>
-        <%= form.label :start_time, "開始" %>
+      <div class="date-picker col s4">
+        <%= form.label :start_at_date, "開始日" %>
+        <input type="date" name="event[start_at_date]" class="datepicker">
+      </div>
+      <div class="time-picker col s4">
+        <%= form.label :start_at_time, "開始時間" %>
+        <input type="time" name="event[start_at_time]" class="timepicker">
       </div>
     </div>
 
     <div class="row">
-      <div class="input-field datetime_select col s10">
-        <%= form.datetime_select :end_time, :use_month_numbers => true, :use_two_digit_numbers => true, :minute_step => 30, :date_separator => '/' %>
-        <%= form.label :end_time, "終了" %>
+      <div class="date-picker col s4">
+        <%= form.label :start_at_date, "終了日" %>
+        <input type="date" name="event[end_at_date]" class="datepicker">
+      </div>
+      <div class="time-picker col s4">
+        <%= form.label :start_at_time, "終了時間" %>
+        <input type="time" name="event[end_at_time]" class="timepicker">
       </div>
     </div>
+
+    <div class="col s10 input-field">
+      <%= form.text_area :memo, :class => 'materialize-textarea' %>
+      <%= form.label :memo, "メモ" %>
+    </div>
+
+    <!-- <div class="col s10 range-field">
+      <input type="range" name="" value="">
+    </div> -->
   </div>
 
   <div class="modal-footer">
-    <a class="modal-action modal-close btn-flat right" onclick="unselect()">Cancel
+    <a class="modal-action modal-close btn-flat right">Cancel
       <i class="material-icons right">clear</i>
     </a>
 

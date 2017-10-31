@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-  protect_from_forgery :except => [:create]
+  protect_from_forgery :except => [:create, :edit]
 
   # GET /events
   # GET /events.json
@@ -30,7 +30,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.html { redirect_to dashboard_home_path, notice: 'Event was successfully created.' }
         format.json { render :show, status: :created, location: @event }
       else
         format.html { render :new }
@@ -71,6 +71,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:title, :start_at, :end_at, :memo, :speak, :morn_or_night, :priority)
+      params.require(:event).permit(:title, :start_at_date, :start_at_time, :end_at_date, :end_at_time, :memo, :priority)
     end
 end

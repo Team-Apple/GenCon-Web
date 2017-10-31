@@ -20,7 +20,7 @@
             <% unless @todays_announcements.empty? %>
               <ul class="collection">
                 <% @todays_announcements.each do |anc| %>
-                  <li class="collection-item"><%= render anc.title %></li>
+                  <li class="collection-item"><%=  anc.title %></li>
                 <% end %>
               </ul>
             <% end %>
@@ -29,7 +29,7 @@
             <% unless @tomorrows_announcements.empty? %>
               <ul class="collection">
                 <% @tomorrows_announcements.each do |anc| %>
-                  <li class="collection-item"> <%= render anc.title %></li>
+                  <li class="collection-item"> <%=  anc.title %></li>
                 <% end %>
               </ul>
             <% end %>
@@ -65,16 +65,28 @@
             <% unless @todays_events.empty? %>
               <ul class="collection">
                 <% @todays_events.each do |ev| %>
-                  <li class="collection-item"><%= render ev.title %></li>
+                  <li class="collection-item avatar">
+                    <i class="material-icons circle teal darken-3">event</i>
+                    <span class="title"><%= ev.title %></span>
+                    <p>
+                      <%= ev.start_at_time.to_s(:time_short) %> ~ <%= ev.end_at_time.to_s(:time_short) %>
+                    </p>
+                  </li>
                 <% end %>
               </ul>
             <% end %>
           </div>
-          <div class="tomorrows_events">
+          <div id="tomorrows_events">
             <% unless @tomorrows_events.empty? %>
               <ul class="collection">
                 <% @tomorrows_events.each do |ev| %>
-                  <li class="collection-item"> <%= render ev.title %></li>
+                  <li class="collection-item avatar">
+                    <i class="material-icons circle teal darken-3">event</i>
+                    <span class="title"><%= ev.title %></span>
+                    <p>
+                      <%= ev.start_at_time.to_s(:time_short) %> ~ <%= ev.end_at_time.to_s(:time_short) %>
+                    </p>
+                  </li>
                 <% end %>
               </ul>
             <% end %>
@@ -110,7 +122,7 @@
             <% unless @todays_start_tasks.empty? %>
               <ul class="collection">
                 <% @todays_tasks.each do |ts| %>
-                  <li class="collection-item"><%= render ts.title %></li>
+                  <li class="collection-item"><%=  ts.title %></li>
                 <% end %>
               </ul>
             <% end %>
@@ -119,7 +131,7 @@
             <% unless @tomorrows_start_tasks.empty? %>
               <ul class="collection">
                 <% @tomorrows_tasks.each do |ts| %>
-                  <li class="collection-item"> <%= render ts.title %></li>
+                  <li class="collection-item"> <%=  ts.title %></li>
                 <% end %>
               </ul>
             <% end %>
@@ -134,5 +146,5 @@
   </div>
 </div>
 
-<div id="form" class="load_point modal bottom-sheet">
+<div id="form" class="load_point modal">
 </div>
