@@ -55,17 +55,19 @@
         <%= form.label :memo, "メモ", class: field_activated %>
       </div>
     </div>
-
-    <!-- <div class="col s10 range-field">
-      <input type="range" name="" value="">
-    </div> -->
   </div>
 
   <div class="modal-footer">
     <a class="modal-action modal-close btn-flat left">Cancel
     </a>
 
-    <button id="submit" class="btn waves-effect waves-green right" type="submit" name="action">Save
+    <% unless form.object.new_record? %>
+      <%= link_to event, method: :delete, data: { confirm: '本当に削除してもよろしいですか？' }, class: 'btn waves-effect waves-light red left' do %>
+        DELETE
+      <% end %>
+    <% end %>
+
+    <button id="submit" class="btn waves-effect waves-light right" type="submit" name="action">Save
     </button>
   </div>
 <% end %>

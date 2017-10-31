@@ -1,29 +1,43 @@
+<% provide :title, "All Event" %>
+
 <div class="row">
-  <div class="col s12 l6">
+  <div class="col s12">
     <div class="card">
       <div class="card-content">
-        <span class="card-title activator">GenConからのお知らせ<i class="material-icons right">settings</i></span>
+        <span class="card-title activator">イベント<i class="material-icons right">settings</i></span>
       </div>
 
       <div class="card-stacked">
-        <div class="card-tabs">
-          <ul class="tabs tabs-fixed-width">
-            <li class="tab"><a href="#tab1">今日</a></li>
-            <li class="tab"><a href="#tab2">明日</a></li>
+        <div class="card-content">
+          <ul class="collection">
+            <% unless @events.empty? %>
+              <ul class="collection">
+                <% @events.each do |ev| %>
+                  <% if ev.priority == 'normal' %>
+                    <% provide :priority_color, 'cyan accent-4' %>
+                  <% elsif ev.priority == 'high' %>
+                    <% provide :priority_color, 'red' %>
+                  <% else %>
+                    <% provide :priority_color, 'teal darken-3' %>
+                  <% end %>
+                  <li class="collection-item avatar">
+                    <i class="material-icons circle <%= ev.priority_color %>">event</i>
+                    <span class="title"><%= ev.title %></span>
+                    <p>
+                      <%= ev.start_at_time.to_s(:time_short) %> ~ <%= ev.end_at_time.to_s(:time_short) %>
+                    </p>
+                    <%= link_to edit_event_path(ev), remote: true, class: 'btn-floating secondary-content' do %>
+                      <i class="material-icons">edit</i>
+                    <% end %>
+                  </li>
+                <% end %>
+              </ul>
+            <% end %>
           </ul>
         </div>
 
-        <div class="card-content">
-          <div id="tab1">
-            <ul class="collection">
-              <li class="collection-item">ゴミ出し</li>
-              <li class="collection-item">天気</li>
-            </ul>
-          </div>
-        </div>
-
         <div class="card-action">
-          <a class="btn waves-effect waves-light">NEW<i class="material-icons right">add</i></a>
+          <a class="btn waves-effect waves-light">NEW<a>
         </div>
       </div>
     </div>

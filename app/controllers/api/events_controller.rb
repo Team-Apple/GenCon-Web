@@ -1,21 +1,16 @@
-class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
+class Api::EventsController < ApplicationController
+  # before_action :set_event, only: [:show, :edit, :update, :destroy]
   protect_from_forgery :except => [:create, :edit]
 
-  # GET /events
-  # GET /events.json
+  # GET /api/events.json
+  # GET /api/events.json?start_at_date=
   def index
-    @events = Event.all
-    @event = Event.new
-  end
-
-  # GET /events/new
-  def new
-    @event = Event.new
-  end
-
-  # GET /events/1/edit
-  def edit
+    if params['start_at_date']
+      @events = Event.where(start_at_date: params['start_at_date'])
+    else
+      @events = Event.all
+    end
+    render 'events/index', events: @events
   end
 
   # POST /events
@@ -23,14 +18,10 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
 
-    respond_to do |format|
-      if @event.save
-        format.html { redirect_to dashboard_home_path, notice: 'Event was successfully created.' }
-        format.json { render 'event', status: :ok, event: @event }
-      else
-        format.html { render :new }
-        format.json { render json: @event.errors, status: :unprocessable_entity }
-      end
+    if @event.save
+      render html: '200'
+    else
+      render json: @event.errors, status: :unprocessable_entity
     end
   end
 
@@ -66,6 +57,6 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:title, :start_at_date, :start_at_time, :end_at_date, :end_at_time, :memo, :priority)
+      params.permit(:title, :start_at_date, :start_at_time, :end_at_date, :end_at_time, :memo, :priority)
     end
 end

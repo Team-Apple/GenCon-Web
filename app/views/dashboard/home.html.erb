@@ -4,7 +4,7 @@
   <div class="col m6 s12 l6 xl6 announcements">
     <div class="card">
       <div class="card-content">
-        <span class="card-title activator">お知らせ<i class="material-icons right">settings</i></span>
+        <span class="card-title activator">お知らせ</span>
       </div>
 
       <div class="card-stacked">
@@ -49,7 +49,7 @@
   <div class="col m6 s12 l6 xl6 events">
     <div class="card">
       <div class="card-content">
-        <span class="card-title activator">イベント<i class="material-icons right">settings</i></span>
+        <span class="card-title">イベント</span>
       </div>
 
       <div class="card-stacked">
@@ -111,8 +111,12 @@
         </div>
 
         <div class="card-action">
-          <%= link_to new_event_path, remote: true, class: "btn waves-effect waves-light" do %>
-            NEW
+          <%= link_to new_event_path, remote: true, class: 'btn-floating waves-effect waves-light left' do %>
+            <i class="material-icons red">add</i>
+          <% end %>
+
+          <%= link_to events_path, class: 'btn-floating waves-effect waves-light right' do %>
+            <i class="material-icons grey">open_in_new</i>
           <% end %>
         </div>
       </div>
