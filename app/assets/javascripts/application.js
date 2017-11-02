@@ -13,7 +13,7 @@
 //= require rails-ujs
 //= require turbolinks
 //= require jquery/dist/jquery
-//= require materialize-sprockets
+// = require materialize-sprockets
 //= require moment/moment
 //= require fullcalendar/dist/fullcalendar
 //= require_tree .
