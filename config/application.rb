@@ -11,6 +11,7 @@ module Gencon
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
     config.time_zone = 'Tokyo'
+    config.serve_static_asstes = true
     config.autoload_paths += %W(#{config.root}/lib)
     config.assets.paths << Rails.root.join("node_modules")
 
