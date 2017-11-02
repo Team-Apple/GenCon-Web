@@ -23,6 +23,6 @@ global.formalize = ->
     autoclose: false
     ampmclickable: true
 
-  $('#form').modal 'open'
   $('select').material_select()
-  modalW = $('.modal').width()
+  $('#loader-bg').fadeOut()
+  $('#form').modal 'open'

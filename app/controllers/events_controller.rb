@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
+  around_action :render_form, only: [:new, :edit]
   protect_from_forgery :except => [:create, :edit]
 
   # GET /events
@@ -62,6 +63,10 @@ class EventsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_event
       @event = Event.find(params[:id])
+    end
+
+    def render_form
+      render 'modal_form'
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

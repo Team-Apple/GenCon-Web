@@ -19,7 +19,7 @@ class Api::EventsController < ApplicationController
     @event = Event.new(event_params)
 
     if @event.save
-      render html: '200'
+      render html: '200', status: :ok
     else
       render json: @event.errors, status: :unprocessable_entity
     end

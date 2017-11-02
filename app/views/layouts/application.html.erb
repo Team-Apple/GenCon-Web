@@ -13,16 +13,25 @@
   <body>
     <nav>
       <div class="nav-wrapper container">
-        <a href="/" class="brand-logo">GenCon - <%= yield :title %></a>
+        <a href="/" class="brand-logo">GenCon<%# yield :title %></a>
+        <a href="" class="button-collapse" data-activates="sidenav" >
+          <i class="material-icons">menu</i>
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <%= render 'layouts/navigations' %>
+        </ul>
+
+        <!-- for side navbar, hide on large resolution -->
+        <ul id="sidenav" class="side-nav">
+          <li class=""></li>
+          <%= render 'layouts/navigations' %>
+        </ul>
       </div>
     </nav>
     <div class="container">
       <%= yield %>
+      <div id="form" class="load_point modal"></div>
     </div>
-    <% coffee_script_tag do %>
-      $(document).ready ->
-        $('select').material_select()
-    <% end %>
 
     <div id="loader-bg">
       <div id="loading-effect">
