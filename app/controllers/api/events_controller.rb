@@ -1,5 +1,5 @@
 class Api::EventsController < ApplicationController
-  before_action :set_event => [:update, :destroy]
+  before_action :set_event => [:update]
   protect_from_forgery :except => [:create, :update, :destroy]
 
   # GET /api/events.json
@@ -50,9 +50,10 @@ class Api::EventsController < ApplicationController
   # DELETE /events/1
   # DELETE /events/1.json
   def destroy
+    @event = Event.find(params[:id]) # cannot find at before_action
     @event.destroy
     respond_to do |format|
-      format.html { redirect_to dashboard_home_path, notice: 'Event was successfully destroyed.' }
+      format.html { render html: '200', status: :ok }
       format.json { head :no_content }
     end
   end
@@ -61,6 +62,7 @@ class Api::EventsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_event
       @event = Event.find(params[:id])
+      puts @event.nil?
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

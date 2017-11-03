@@ -7,7 +7,11 @@ class EventsController < ApplicationController
   def index
     @events = Event.all
     @event = Event.new
-    puts "#{params[:controller]}/#{params[:action]}"
+
+    respond_to do |format|
+      format.html
+      format.json { render 'events/index', events: @events }
+    end
   end
 
   # GET /events/new
@@ -67,6 +71,7 @@ class EventsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_event
       @event = Event.find(params[:id])
+      puts @event.nil?
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
