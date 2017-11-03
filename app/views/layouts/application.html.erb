@@ -7,22 +7,13 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
 
   <body>
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper container">
-          <a href="/" class="brand-logo"><%= yield :title %></a>
-          <a href="" class="button-collapse" data-activates="sidenav" >
-            <i class="material-icons">menu</i>
-          </a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <%= render 'layouts/navigations' %>
-          </ul>
-      </nav>
-    </div>
+    <%= render 'layouts/navbar' %>
+
     <!-- for side navbar, hide on large resolution -->
     <ul id="sidenav" class="side-nav">
       <li class="logo center-align">
@@ -31,12 +22,12 @@
       <%= render 'layouts/navigations' %>
     </ul>
   </div>
-    <div class="container">
+    <div class="container main">
       <%= yield %>
       <div id="form" class="load_point modal"></div>
     </div>
 
-    <div id="loader-bg">
+    <!-- <div id="loader-bg">
       <div id="loading-effect">
         <div class="preloader-wrapper big active">
           <div class="spinner-layer spinner-blue-only">
@@ -50,6 +41,6 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </body>
 </html>

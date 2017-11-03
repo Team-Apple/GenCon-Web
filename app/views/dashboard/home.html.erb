@@ -4,6 +4,10 @@
 <div class="row">
   <div class="col m6 s12 l6 xl6 announcements">
     <div class="card">
+      <div class="progress">
+        <div class="indeterminate"></div>
+      </div>
+
       <div class="card-content">
         <span class="card-title activator">お知らせ</span>
       </div>
@@ -18,38 +22,31 @@
 
         <div class="card-content">
           <div id="todays_announce">
-            <%# unless @todays_announcements.empty? %>
+            <% unless @todays_announcements.empty? %>
               <ul class="collection">
-                <%# @todays_announcements.each do |anc| %>
+                <% @todays_announcements.each do |anc| %>
                   <li class="collection-item avatar">
-                    <i class="material-icons circle orange">forum</i>
-                    <span class="title">ゴミ出し</span>
-                    <p>
-                      家を出るとき
-                    </p>
-                    <%= link_to dashboard_home_path, remote: true, class: 'btn-floating secondary-content' do %>
+                    <i class="material-icons circle">forum</i>
+                    <span class="title"><%= anc.title %></span>
+                    <%= link_to edit_announcement_path(anc), remote: true, class: 'btn-floating secondary-content' do %>
                       <i class="material-icons">edit</i>
                     <% end %>
                   </li>
-                  <li class="collection-item avatar">
-                    <i class="material-icons circle orange">forum</i>
-                    <span class="title">天気</span>
-                    <p>
-                      家を出るとき
-                    </p>
-                    <%= link_to dashboard_home_path, remote: true, class: 'btn-floating secondary-content' do %>
-                      <i class="material-icons">edit</i>
-                    <% end %>
-                  </li>
-                <%# end %>
+                <% end %>
               </ul>
-            <%# end %>
+            <% end %>
           </div>
-          <div class="tomorrows_announce">
+          <div id="tomorrows_announce">
             <% unless @tomorrows_announcements.empty? %>
               <ul class="collection">
                 <% @tomorrows_announcements.each do |anc| %>
-                  <li class="collection-item"> <%=  anc.title %></li>
+                  <li class="collection-item avatar">
+                    <i class="material-icons circle">forum</i>
+                    <span class="title"><%= anc.title %></span>
+                    <%= link_to edit_announcement_path(anc), remote: true, class: 'btn-floating secondary-content' do %>
+                      <i class="material-icons">edit</i>
+                    <% end %>
+                  </li>
                 <% end %>
               </ul>
             <% end %>
@@ -71,6 +68,10 @@
 
   <div class="col m6 s12 l6 xl6 events">
     <div class="card">
+      <div class="progress">
+        <div class="indeterminate"></div>
+      </div>
+
       <div class="card-content">
         <span class="card-title">イベント</span>
       </div>
@@ -150,6 +151,10 @@
 <div class="row">
   <div class="col m6 s12 l6 xl6 tasks">
     <div class="card">
+      <div class="progress">
+        <div class="indeterminate"></div>
+      </div>
+
       <div class="card-content">
         <span class="card-title activator">タスク</span>
       </div>

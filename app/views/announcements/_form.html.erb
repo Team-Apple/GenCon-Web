@@ -1,17 +1,52 @@
-<%= form_with(model: announcement, local: true) do |form| %>
-  <% if announcement.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(announcement.errors.count, "error") %> prohibited this announcement from being saved:</h2>
-
-      <ul>
-      <% announcement.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+<%= form_with(model: @announcement, local: true) do |form| %>
+  <% if form.object.new_record? %>
+    <% provide :form_title, "New" %>
+    <% selected = "normal" %>
+    <% field_activated = "" %>
+  <% else %>
+    <% provide :form_title, "Edit" %>
+    <% provide :flld_d, @announcement.date %>
+    <% provide :slctd_mode %>
+    <% field_activated = "active" %>
   <% end %>
 
-  <div class="actions">
-    <%= form.submit %>
+  <div class="modal-content">
+    <h3><%= yield :form_title %></h3>
+
+    <div class="row">
+      <div class="col s9 input-field">
+        <%= form.text_field :title, required: true %>
+        <%= form.label :title, "タイトル", required: true, class: field_activated %>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="date-picker col s4">
+        <%= form.label :date, "日付" %>
+        <input required="required" type="date" name="announcement[date]" class="datepicker" value=<%= yield :flld_d %> >
+      </div>
+      <div class="col s3 input-field">
+        <%= form.select :timing, options_for_select(["家を出るとき", "家に帰ったとき"], [true, false]) %>
+        <%= form.label :timing, "タイミング" %>
+      </div>
+      <div class="col s3 input-field">
+        <%= form.select :mode, options_for_select(["イベント", "タスク", "天気", "ゴミ出し", "株価"], Array(0..4)) %>
+        <%= form.label :mode, "内容" %>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <a class="modal-action modal-close btn-flat left">Cancel
+    </a>
+
+    <% unless form.object.new_record? %>
+      <%= link_to announcement, method: :delete, data: { confirm: '本当に削除してもよろしいですか？' }, class: 'btn waves-effect waves-light red left' do %>
+        DELETE
+      <% end %>
+    <% end %>
+
+    <button id="submit" class="btn waves-effect waves-light right" type="submit" name="action">Save
+    </button>
   </div>
 <% end %>

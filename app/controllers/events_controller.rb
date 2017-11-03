@@ -1,13 +1,13 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-  around_action :render_form, only: [:new, :edit]
-  protect_from_forgery :except => [:create, :edit]
+  before_action :render_form, only: [:new, :edit]
 
   # GET /events
   # GET /events.json
   def index
     @events = Event.all
     @event = Event.new
+    puts "#{params[:controller]}/#{params[:action]}"
   end
 
   # GET /events/new
@@ -26,8 +26,12 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to dashboard_home_path, notice: 'Event was successfully created.' }
-        format.json { render 'event', status: :ok, event: @event }
+        if params[:action] == 'home'
+          format.html { redirect_to dashboard_home_path }
+        else
+          format.html { redirect_to events_path }
+        end
+        format.json { render 'event', status: :created, event: @event }
       else
         format.html { render :new }
         format.json { render json: @event.errors, status: :unprocessable_entity }
@@ -63,10 +67,6 @@ class EventsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_event
       @event = Event.find(params[:id])
-    end
-
-    def render_form
-      render 'modal_form'
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

@@ -9,9 +9,9 @@
     <% provide :flld_st_t, @event.start_at_time.to_s(:time_short) %>
     <% provide :flld_ed_d, @event.end_at_date %>
     <% provide :flld_ed_t, @event.end_at_time.to_s(:time_short) %>
-    <% selected = @event.priority %>
     <% field_activated = "active" %>
   <% end %>
+
   <div class="modal-content">
     <h3><%= yield :form_title %></h3>
 
@@ -22,7 +22,7 @@
       </div>
 
       <div class="col s3 input-field">
-        <%= form.select :priority, Event.priorities.keys.to_a, {}, required: true, selected: selected %>
+        <%= form.select :priority, Event.priorities.keys.to_a, {}, required: true %>
         <%= form.label :priority, "優先度" %>
       </div>
     </div>

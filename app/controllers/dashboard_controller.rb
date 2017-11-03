@@ -1,5 +1,4 @@
 class DashboardController < ApplicationController
-  
   def home
     two_days_announcement = Announcement.get_two_days_announcements(Date.current)
     @todays_announcements = two_days_announcement["current"]

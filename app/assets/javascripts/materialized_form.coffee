@@ -1,8 +1,15 @@
 global = this
 
-global.formalize = ->
+global.load_begin = (which) ->
+  $(".#{which} .progress").fadeIn()
+
+global.load_done = (which) ->
+  $(".#{which} .progress").fadeOut()
+
+global.formalize_and_open = ->
   $('#form').modal()
   $('.datepicker').pickadate
+    container: '.main'
     selectMonths: true
     selectYears: 8
     format: 'yyyy-mm-dd'
@@ -13,6 +20,7 @@ global.formalize = ->
     closeOnSelect: false
 
   $('.timepicker').pickatime
+    container: '.main'
     default: 'now'
     format: 'HH:ii'
     formatSubmit: 'HH:ii'
@@ -24,5 +32,4 @@ global.formalize = ->
     ampmclickable: true
 
   $('select').material_select()
-  $('#loader-bg').fadeOut()
   $('#form').modal 'open'

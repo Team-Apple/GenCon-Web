@@ -9,7 +9,11 @@ class Api::EventsController < ApplicationController
     else
       @events = Event.all
     end
-    render 'events/index', events: @events
+
+    respond_to do |format|
+      format.html { render html: '200' }
+      format.json { render 'events/index', events: @events, status: :ok }
+    end
   end
 
   # POST /events
@@ -17,10 +21,14 @@ class Api::EventsController < ApplicationController
   def create
     @event = Event.new(event_params)
 
-    if @event.save
-      render html: '200', status: :ok
-    else
-      render json: @event.errors, status: :unprocessable_entity
+    respond_to do |format|
+      if @event.save
+        format.html { render html: '200' }
+        format.json { render 'events/event', event: @event, status: :created }
+      else
+        format.html { render html: '500', status: :unprocessable_entity }
+        format.json { render json: @event.errors, status: :unprocessable_entity }
+      end
     end
   end
 
