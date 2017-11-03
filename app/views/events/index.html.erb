@@ -14,13 +14,6 @@
             <% unless @events.empty? %>
               <ul class="collection">
                 <% @events.each do |ev| %>
-                  <% if ev.priority == 'normal' %>
-                    <% provide :priority_color, 'cyan accent-4' %>
-                  <% elsif ev.priority == 'high' %>
-                    <% provide :priority_color, 'red' %>
-                  <% else %>
-                    <% provide :priority_color, 'teal darken-3' %>
-                  <% end %>
                   <li class="collection-item avatar">
                     <i class="material-icons circle <%= ev.priority_color %>">event</i>
                     <span class="title"><%= ev.title %></span>
@@ -38,7 +31,9 @@
         </div>
 
         <div class="card-action">
-          <a class="btn waves-effect waves-light">NEW</a>
+          <%= link_to new_event_path, remote: true, class: 'btn waves-effect waves-light' do %>
+            NEW
+          <% end %>
         </div>
       </div>
     </div>

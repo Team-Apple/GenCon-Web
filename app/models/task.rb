@@ -1,4 +1,6 @@
 class Task < ApplicationRecord
+
+
   def self.get_two_days_tasks(start)
     two_days = Task.where(start_from_date: start..start.tomorrow, deadline_date: start..start.tomorrow)
 

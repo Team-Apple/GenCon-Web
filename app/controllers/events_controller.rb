@@ -49,10 +49,8 @@ class EventsController < ApplicationController
     respond_to do |format|
       if @event.update(event_params)
         format.html { redirect_to dashboard_home_path, notice: 'Event was successfully updated.' }
-        format.json { render 'event', status: :ok, event: @event }
       else
-        format.html { render :edit }
-        format.json { render json: @event.errors, status: :unprocessable_entity }
+        format.html { render html: 'shit', status: :unprocessable_entity }
       end
     end
   end

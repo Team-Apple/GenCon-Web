@@ -5,6 +5,7 @@ class Event < ApplicationRecord
   validates :end_at_date, presence: true
   validates :end_at_time, presence: true
   validates :priority, presence: true
+  validate :event_cannot_be_in_the_past
 
   enum priority: { low: 0, normal: 1, high: 2 }
 
@@ -21,7 +22,6 @@ class Event < ApplicationRecord
     if created_at.nil? or created_at > DateTime.current
       if start_at_date < Date.current
         errors.add(:start_at_date, 'cannot be in the past')
-      elsif start_at_date == Date.current
       end
     end
   end

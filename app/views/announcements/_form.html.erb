@@ -30,7 +30,7 @@
         <%= form.label :timing, "タイミング" %>
       </div>
       <div class="col s3 input-field">
-        <%= form.select :mode, options_for_select({"イベント" => 0, "タスク" => 1, "天気" => 2, "ゴミ出し" => 3, "為替" => 4})  %>
+        <%= form.select :mode, options_for_select({"イベント" => 'event', "タスク" => 'task', "天気" => 'weather', "ゴミ出し" => 'trash', "為替" => 'exchange'})  %>
         <%= form.label :mode, "内容" %>
       </div>
     </div>

@@ -44,11 +44,9 @@ class AnnouncementsController < ApplicationController
   def update
     respond_to do |format|
       if @announcement.update(announcement_params)
-        format.html { redirect_to @announcement, notice: 'Announcement was successfully updated.' }
-        format.json { render :show, status: :ok, location: @announcement }
+        format.html { redirect_to dashboard_home_path, notice: 'Announcement was successfully updated.' }
       else
-        format.html { render :edit }
-        format.json { render json: @announcement.errors, status: :unprocessable_entity }
+        format.html { render html: 'shit', status: :unprocessable_entity }
       end
     end
   end
@@ -58,7 +56,7 @@ class AnnouncementsController < ApplicationController
   def destroy
     @announcement.destroy
     respond_to do |format|
-      format.html { redirect_to announcements_url, notice: 'Announcement was successfully destroyed.' }
+      format.html { redirect_to dashboard_home_path, notice: 'Announcement was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
