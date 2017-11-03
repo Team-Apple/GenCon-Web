@@ -1,4 +1,5 @@
 class Api::EventsController < ApplicationController
+  before_action :set_event => [:update, :destroy]
   protect_from_forgery :except => [:create, :update, :destroy]
 
   # GET /api/events.json
