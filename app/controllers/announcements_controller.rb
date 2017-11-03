@@ -26,7 +26,6 @@ class AnnouncementsController < ApplicationController
 
     respond_to do |format|
       if @announcement.save
-        puts params[:view]
         if params[:action] == 'home'
           format.html { redirect_to dashboard_home_path }
         else

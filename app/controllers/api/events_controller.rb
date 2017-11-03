@@ -1,5 +1,5 @@
 class Api::EventsController < ApplicationController
-  protect_from_forgery :except => [:create, :edit]
+  protect_from_forgery :except => [:create, :update, :destroy]
 
   # GET /api/events.json
   # GET /api/events.json?start_at_date=

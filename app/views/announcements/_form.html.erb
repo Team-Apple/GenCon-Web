@@ -26,11 +26,11 @@
         <input required="required" type="date" name="announcement[date]" class="datepicker" value=<%= yield :flld_d %> >
       </div>
       <div class="col s3 input-field">
-        <%= form.select :timing, options_for_select(["家を出るとき", "家に帰ったとき"], [true, false]) %>
+        <%= form.select :timing, options_for_select({"家を出るとき" => true, "家に帰ったとき" => false}, true) %>
         <%= form.label :timing, "タイミング" %>
       </div>
       <div class="col s3 input-field">
-        <%= form.select :mode, options_for_select(["イベント", "タスク", "天気", "ゴミ出し", "株価"], Array(0..4)) %>
+        <%= form.select :mode, options_for_select({"イベント" => 0, "タスク" => 1, "天気" => 2, "ゴミ出し" => 3, "為替" => 4})  %>
         <%= form.label :mode, "内容" %>
       </div>
     </div>
