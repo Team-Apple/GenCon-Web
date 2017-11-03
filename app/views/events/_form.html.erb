@@ -5,10 +5,10 @@
     <% field_activated = "" %>
   <% else %>
     <% provide :form_title, "Edit" %>
-    <% provide :flld_st_d, @event.start_at_date %>
-    <% provide :flld_st_t, @event.start_at_time.to_s(:time_short) %>
-    <% provide :flld_ed_d, @event.end_at_date %>
-    <% provide :flld_ed_t, @event.end_at_time.to_s(:time_short) %>
+    <% flld_st_d = @event.start_at_date %>
+    <% flld_st_t = @event.start_at_time.to_s(:time_short) %>
+    <% flld_ed_d = @event.end_at_date %>
+    <% flld_ed_t = @event.end_at_time.to_s(:time_short) %>
     <% field_activated = "active" %>
   <% end %>
 
@@ -22,7 +22,7 @@
       </div>
 
       <div class="col s3 input-field">
-        <%= form.select :priority, Event.priorities.keys.to_a, {}, required: true %>
+        <%= form.select :priority, Event.priorities.keys.to_a, required: true %>
         <%= form.label :priority, "優先度" %>
       </div>
     </div>
@@ -30,22 +30,22 @@
     <div class="row">
       <div class="date-picker col s4">
         <%= form.label :start_at_date, "開始日" %>
-        <input required="required" type="date" name="event[start_at_date]" class="datepicker" value=<%= yield :flld_st_d %> >
+        <input required="required" type="date" name="event[start_at_date]" class="datepicker" value=<%= flld_st_d %> >
       </div>
       <div class="time-picker col s4">
         <%= form.label :start_at_time, "開始時間" %>
-        <input required="required" type="time" name="event[start_at_time]" class="timepicker" value=<%= yield :flld_st_t %> >
+        <input required="required" type="time" name="event[start_at_time]" class="timepicker" value=<%= flld_st_t %> >
       </div>
     </div>
 
     <div class="row">
       <div class="date-picker col s4">
         <%= form.label :end_at_date, "終了日" %>
-        <input required="required" type="date" name="event[end_at_date]" class="datepicker" value=<%= yield :flld_ed_d %> >
+        <input required="required" type="date" name="event[end_at_date]" class="datepicker" value=<%= flld_ed_d %> >
       </div>
       <div class="time-picker col s4">
         <%= form.label :end_at_time, "終了時間" %>
-        <input required="required" type="time" name="event[end_at_time]" class="timepicker" value=<%= yield :flld_ed_t %> >
+        <input required="required" type="time" name="event[end_at_time]" class="timepicker" value=<%= flld_ed_t %> >
       </div>
     </div>
 

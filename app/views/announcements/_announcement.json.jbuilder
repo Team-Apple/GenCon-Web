@@ -1,2 +1,3 @@
-json.extract! announcement, :id, :created_at, :updated_at
-json.url announcement_url(announcement, format: :json)
+json.id "#{announcement.id}"
+json.(announcement, :date, :mode, :timing)
+json.(announcement, :created_at, :updated_at)

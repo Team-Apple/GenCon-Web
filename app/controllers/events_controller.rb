@@ -30,11 +30,7 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        if params[:action] == 'home'
-          format.html { redirect_to dashboard_home_path }
-        else
-          format.html { redirect_to events_path }
-        end
+        format.html { redirect_to dashboard_home_path }
         format.json { render 'event', status: :created, event: @event }
       else
         format.html { render :new }

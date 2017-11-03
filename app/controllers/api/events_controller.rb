@@ -38,10 +38,10 @@ class Api::EventsController < ApplicationController
   def update
     respond_to do |format|
       if @event.update(event_params)
-        format.html { redirect_to dashboard_home_path, notice: 'Event was successfully updated.' }
+        format.html { render html: '200', status: :ok }
         format.json { render 'event', status: :ok, event: @event }
       else
-        format.html { render :edit }
+        format.html { render html: '500', status: :unprocessable_entity }
         format.json { render json: @event.errors, status: :unprocessable_entity }
       end
     end

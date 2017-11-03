@@ -20,20 +20,11 @@
                     <% timing = '家に帰ったとき' %>
                   <% end %>
 
-                  <% if anc.mode == 'event' %>
-                    <% icon = 'event' %>
-                  <% elsif anc.mode == 'task' %>
-                    <% icon = 'assignment' %>
-                  <% elsif anc.mode == 'weather' %>
-                    <% icon = 'wb_sunny' %>
-                  <% elsif anc.mode == 'trash' %>
-                    <% icon = 'whatshot' %>
-                  <% elsif anc.mode == 'exchange' %>
-                    <% icon = 'timeline' %>
-                  <% end %>
+                  <% icon_set = Announcement.mode_icons_and_colors[anc.mode] %>
+
                   <li class="collection-item avatar">
-                    <i class="material-icons circle"><%= icon %></i>
-                    <span class="title"><%= anc.title %></span>
+                    <i class="material-icons circle <%= icon_set[1] %>"><%= icon_set[0] %></i>
+                    <span class="title"><%= Announcement.jp_translated_modes[anc.mode] %></span>
                     <p>
                       <%= anc.date.to_s(:date_short) %> : <%= timing %>
                     </p>

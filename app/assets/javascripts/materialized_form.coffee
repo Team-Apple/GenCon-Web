@@ -8,7 +8,7 @@ global.load_done = (which) ->
 
 global.formalize_and_open = ->
   $('#form').modal()
-  $('.datepicker').pickadate
+  base_conf = {
     container: '.main'
     selectMonths: true
     selectYears: 8
@@ -18,6 +18,19 @@ global.formalize_and_open = ->
     clear: 'Clear'
     close: 'Ok'
     closeOnSelect: false
+    onSet: undefined
+  }
+
+  $('.datepicker').pickadate
+    container: '.main'
+    selectMonths: true
+    selectYears: 8
+    format: 'yyyy-mm-dd'
+    formatSubmit: 'yyyy-mm-dd'
+    today: 'Today'
+    clear: 'Clear'
+    close: 'Ok'
+    closeOnSelect: true
 
   $('.timepicker').pickatime
     container: '.main'
@@ -28,7 +41,7 @@ global.formalize_and_open = ->
     donetext: 'OK'
     cleartext: 'Clear'
     canceltext: 'Cancel'
-    autoclose: false
+    autoclose: true
     ampmclickable: true
 
   $('select').material_select()

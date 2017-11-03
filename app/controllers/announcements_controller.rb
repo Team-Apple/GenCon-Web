@@ -26,11 +26,7 @@ class AnnouncementsController < ApplicationController
 
     respond_to do |format|
       if @announcement.save
-        if params[:action] == 'home'
-          format.html { redirect_to dashboard_home_path }
-        else
-          format.html { redirect_to announcements_path }
-        end
+        format.html { redirect_to dashboard_home_path }
         format.json { render 'announcement', status: :created, announcement: @announcement }
       else
         format.html { render :new }
@@ -69,6 +65,6 @@ class AnnouncementsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def announcement_params
-      params.require(:announcement).permit(:title, :date, :timing, :mode)
+      params.require(:announcement).permit(:date, :timing, :mode)
     end
 end
