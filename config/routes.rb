@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   namespace :api do
     resources :events
     resources :announcements
+    resources :tasks
   end
 
   root :to => 'dashboard#home'
