@@ -5,7 +5,7 @@ class Task < ApplicationRecord
   validates :deadline_date, presence: true
   validates :deadline_time, presence: true
   validates :priority, presence: true
-  validate
+  validate :task_cannot_be_in_the_past
 
   def self.get_two_days_tasks(start)
     two_days = Task.where(start_from_date: start..start.tomorrow, deadline_date: start..start.tomorrow)

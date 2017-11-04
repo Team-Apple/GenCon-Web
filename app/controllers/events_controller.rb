@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   before_action :set_event, only: [:show, :edit, :update, :destroy]
-  before_action :render_form, only: [:new, :edit]
+  around_action :render_form, only: [:new, :edit]
 
   # GET /events
   # GET /events.json
@@ -33,7 +33,7 @@ class EventsController < ApplicationController
         format.html { redirect_to dashboard_home_path }
         format.json { render 'event', status: :created, event: @event }
       else
-        format.html { render :new }
+        format.html { render dashboard_home_path }
         format.json { render json: @event.errors, status: :unprocessable_entity }
       end
     end
@@ -44,9 +44,9 @@ class EventsController < ApplicationController
   def update
     respond_to do |format|
       if @event.update(event_params)
-        format.html { redirect_to dashboard_home_path, notice: 'Event was successfully updated.' }
+        format.html { redirect_to dashboard_home_path }
       else
-        format.html { render html: 'shit', status: :unprocessable_entity }
+        format.html { render html: '500', status: :unprocessable_entity }
       end
     end
   end

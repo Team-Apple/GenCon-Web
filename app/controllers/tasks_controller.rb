@@ -1,15 +1,17 @@
 class TasksController < ApplicationController
   before_action :set_task, only: [:show, :edit, :update, :destroy]
+  around_action :render_form, only: [:new, :edit]
 
   # GET /tasks
   # GET /tasks.json
   def index
     @tasks = Task.all
-  end
+    @task = Task.new
 
-  # GET /tasks/1
-  # GET /tasks/1.json
-  def show
+    respond_to do |format|
+      format.html
+      format.json { render 'tasks/index', tasks, @tasks }
+    end
   end
 
   # GET /tasks/new
@@ -28,10 +30,10 @@ class TasksController < ApplicationController
 
     respond_to do |format|
       if @task.save
-        format.html { redirect_to @task, notice: 'Task was successfully created.' }
-        format.json { render :show, status: :created, location: @task }
+        format.html { redirect_to dashboard_home_path }
+        format.json { render 'task', status: :created, task: @task }
       else
-        format.html { render :new }
+        format.html { render dashboard_home_path }
         format.json { render json: @task.errors, status: :unprocessable_entity }
       end
     end
@@ -42,11 +44,9 @@ class TasksController < ApplicationController
   def update
     respond_to do |format|
       if @task.update(task_params)
-        format.html { redirect_to @task, notice: 'Task was successfully updated.' }
-        format.json { render :show, status: :ok, location: @task }
+        format.html { redirect_to dashboard_home_path }
       else
-        format.html { render :edit }
-        format.json { render json: @task.errors, status: :unprocessable_entity }
+        format.html { render html: '500' }
       end
     end
   end
@@ -56,7 +56,7 @@ class TasksController < ApplicationController
   def destroy
     @task.destroy
     respond_to do |format|
-      format.html { redirect_to tasks_url, notice: 'Task was successfully destroyed.' }
+      format.html { redirect_to dashboard_home_path, notice: 'Task was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +69,6 @@ class TasksController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def task_params
-      params.fetch(:task, {})
+      params.require(:task).permit(:title, :start_from_date, :start_from_time, :deadline_date, :deadline_time, :memo, :priority)
     end
 end
