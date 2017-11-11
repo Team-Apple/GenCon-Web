@@ -44,4 +44,4 @@ bower.json
 .byebug_history
 
 # Wow, such content very node_modules
-./node_modules/
+./node_modules
