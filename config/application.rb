@@ -11,7 +11,7 @@ module Gencon
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.1
     config.time_zone = 'Tokyo'
-    config.serve_static_asstes = true
+    config.serve_static_files = true
     config.autoload_paths += %W(#{config.root}/lib)
 
     # Settings in config/environments/* take precedence over those specified here.
