@@ -1,4 +1,4 @@
-# global = this
+global = this
 #
 # global.refetch = ->
 #   $('#calendar').fullCalendar 'refetchEvents'
