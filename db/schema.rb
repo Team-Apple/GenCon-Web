@@ -24,9 +24,9 @@ ActiveRecord::Schema.define(version: 20171103184831) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "title"
-    t.string "memo"
-    t.date "end_at_date"
     t.date "start_at_date"
+    t.date "end_at_date"
+    t.string "memo"
     t.integer "priority", default: 1
     t.time "start_at_time"
     t.time "end_at_time"

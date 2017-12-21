@@ -1,25 +1,41 @@
-<p id="notice"><%= notice %></p>
+<% provide :title, "All Tasks" %>
+<% provide :tasks_is_active, "active" %>
 
-<h1>Tasks</h1>
+<div class="row">
+  <div class="col s12">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title activator">タスク<i class="material-icons right">settings</i></span>
+      </div>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+      <div class="card-stacked">
+        <div class="card-content">
+          <ul class="collection">
+            <% unless @tasks.empty? %>
+              <ul class="collection">
+                <% @tasks.each do |ts| %>
+                  <li class="collection-item avatar">
+                    <i class="material-icons circle <%= ts.priority_color %>">event</i>
+                    <span class="title"><%= ts.title %></span>
+                    <p>
+                      <%= ts.start_at_time.to_s(:time_short) %> ~ <%= ts.end_at_time.to_s(:time_short) %>
+                    </p>
+                    <%= link_to edit_task_path(ts), remote: true, class: 'btn-floating secondary-content' do %>
+                      <i class="material-icons">edit</i>
+                    <% end %>
+                  </li>
+                <% end %>
+              </ul>
+            <% end %>
+          </ul>
+        </div>
 
-  <tbody>
-    <% @tasks.each do |task| %>
-      <tr>
-        <td><%= link_to 'Show', task %></td>
-        <td><%= link_to 'Edit', edit_task_path(task) %></td>
-        <td><%= link_to 'Destroy', task, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Task', new_task_path %>
+        <div class="card-action">
+          <%= link_to new_task_path, remote: true, class: 'btn waves-effect waves-light' do %>
+            NEW
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
