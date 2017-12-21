@@ -30,22 +30,22 @@
     <div class="row">
       <div class="date-picker col s4">
         <%= form.label :start_from_date, "開始日" %>
-        <input required="required" type="date" name="event[start_from_date]" class="datepicker" value=<%= flld_st_d %> >
+        <input required="required" type="date" name="task[start_from_date]" class="datepicker" value=<%= flld_st_d %> >
       </div>
       <div class="time-picker col s4">
         <%= form.label :start_from_time, "時間" %>
-        <input required="required" type="time" name="event[start_from_time]" class="timepicker" value=<%= flld_st_t %> >
+        <input required="required" type="time" name="task[start_from_time]" class="timepicker" value=<%= flld_st_t %> >
       </div>
     </div>
 
     <div class="row">
       <div class="date-picker col s4">
         <%= form.label :deadline_date, "締切日" %>
-        <input required="required" type="date" name="event[deadline_date]" class="datepicker" value=<%= flld_ed_d %> >
+        <input required="required" type="date" name="task[deadline_date]" class="datepicker" value=<%= flld_ed_d %> >
       </div>
       <div class="time-picker col s4">
         <%= form.label :deadline_time, "時間" %>
-        <input required="required" type="time" name="event[deadline_time]" class="timepicker" value=<%= flld_ed_t %> >
+        <input required="required" type="time" name="task[deadline_time]" class="timepicker" value=<%= flld_ed_t %> >
       </div>
     </div>
 
