@@ -7,6 +7,8 @@ class Task < ApplicationRecord
   validates :priority, presence: true
   validate :task_cannot_be_in_the_past
 
+  enum priority: { low: 0, normal: 1, high: 2 }
+
   def self.get_two_days_tasks(start)
     two_days = Task.where(start_from_date: start..start.tomorrow, deadline_date: start..start.tomorrow)
 
@@ -24,6 +26,17 @@ class Task < ApplicationRecord
       if start_from_date < Date.current
         errors.add(:start_from_date, 'cannot be in the past')
       end
+    end
+  end
+
+  def priority_color
+    case priority_before_type_cast
+    when 0
+      return 'green'
+    when 1
+      return 'yellow'
+    when 2
+      return 'red'
     end
   end
 end

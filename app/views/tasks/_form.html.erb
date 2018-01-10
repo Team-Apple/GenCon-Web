@@ -5,10 +5,10 @@
     <% field_activated = "" %>
   <% else %>
     <% provide :form_title, "Edit" %>
-    <% flld_st_d = @event.start_from_date %>
-    <% flld_st_t = @event.start_from_time.to_s(:time_short) %>
-    <% flld_ed_d = @event.deadline_date %>
-    <% flld_ed_t = @event.deadline_time.to_s(:time_short) %>
+    <% flld_st_d = @task.start_from_date %>
+    <% flld_st_t = @task.start_from_time.to_s(:time_short) %>
+    <% flld_ed_d = @task.deadline_date %>
+    <% flld_ed_t = @task.deadline_time.to_s(:time_short) %>
     <% field_activated = "active" %>
   <% end %>
 
@@ -22,7 +22,7 @@
       </div>
 
       <div class="col s3 input-field">
-        <%= form.select :priority, Event.priorities.keys.to_a, required: true %>
+        <%= form.select :priority, Task.priorities.keys.to_a, required: true %>
         <%= form.label :priority, "優先度" %>
       </div>
     </div>
@@ -62,7 +62,7 @@
     </a>
 
     <% unless form.object.new_record? %>
-      <%= link_to event, method: :delete, data: { confirm: '本当に削除してもよろしいですか？' }, class: 'btn waves-effect waves-light red left' do %>
+      <%= link_to task, method: :delete, data: { confirm: '本当に削除してもよろしいですか？' }, class: 'btn waves-effect waves-light red left' do %>
         DELETE
       <% end %>
     <% end %>

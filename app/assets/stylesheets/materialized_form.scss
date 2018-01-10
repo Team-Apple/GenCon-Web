@@ -1,0 +1,7 @@
+.modal.bottom-sheet.btmsht-fullsized {
+  max-height: 85% !important;
+
+  .modal-footer {
+    z-index: 999;
+  }
+}

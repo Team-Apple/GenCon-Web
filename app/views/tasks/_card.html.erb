@@ -1,0 +1,69 @@
+<div class="card">
+  <div class="progress">
+    <div class="indeterminate"></div>
+  </div>
+
+  <div class="card-content">
+    <span class="card-title activator">タスク</span>
+  </div>
+
+  <div class="card-stacked">
+    <div class="card-tabs">
+      <ul class="tabs tabs-fixed-width">
+        <li class="tab"><a href="#todays_deadline_tasks">今日が締め切り</a></li>
+        <li class="tab"><a href="#todays_start_tasks">今日から開始</a></li>
+        <li class="tab"><a href="#tomorrows_deadline_tasks">明日が締め切り</a></li>
+        <li class="tab"><a href="#tomorrows_start_tasks">明日から開始</a></li>
+      </ul>
+    </div>
+
+    <div class="card-content">
+      <div id="todays_start_tasks">
+        <% unless @todays_start_tasks.empty? %>
+          <ul class="collection">
+            </li>
+            <% @todays_start_tasks.each do |ts| %>
+              <li class="collection-item avatar">
+                <i class="material-icons circle cyan">assignment</i>
+                <span class="title"><%= ts.title %></span>
+                <p>
+                  <%= ts.start_from_time.to_s(:time_short) %> から開始
+                </p>
+                <%= link_to edit_task_path(ts), remote: true, class: "btn-floating secondary-content" do %>
+                  <i class="material-icons">edit</i>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
+      </div>
+      <div id="tomorrows_start_tasks">
+        <% unless @tomorrows_start_tasks.empty? %>
+          <ul class="collection">
+            <% @tomorrows_start_tasks.each do |ts| %>
+              <li class="collection-item avatar">
+                <span class="title"><%= ts.title %></span>
+                <p>
+                  <%= ts.start_from_time.to_s(:time_short) %> から開始
+                </p>
+                <%= link_to edit_task_path(ts), remote: true, class: "btn-floating secondary-content" do %>
+                  <i class="material-icons">edit</i>
+                <% end %>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="card-action">
+      <%= link_to new_task_path, remote: true, class: 'btn-floating waves-effect waves-light red left' do %>
+        <i class="material-icons circle">add</i>
+      <% end %>
+
+      <%= link_to tasks_path, class: 'btn-floating waves-effect waves-light grey right' do %>
+        <i class="material-icons circle">open_in_new</i>
+      <% end %>
+    </div>
+  </div>
+</div>
