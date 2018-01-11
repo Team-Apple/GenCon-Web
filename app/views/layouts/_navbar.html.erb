@@ -1,12 +1,13 @@
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper container">
-      <a href="/" class="brand-logo"><%= yield :title %></a>
+      <span class="brand-logo"><a href="/">GenCon</a> <span class="hide-on-small-only">- <%= yield :title %></span> </span>
       <a href="" class="button-collapse" data-activates="sidenav" >
         <i class="material-icons">menu</i>
       </a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
         <%= render 'layouts/navigations' %>
       </ul>
+    </div>
   </nav>
 </div>

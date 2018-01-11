@@ -18,6 +18,9 @@
         <%= form.label :date, "日付" %>
         <input required="required" type="date" name="announcement[date]" class="datepicker" value=<%= flld_d %> >
       </div>
+    </div>
+
+    <div class="row">
       <div class="col s3 input-field">
         <%= form.select :timing, Announcement.jp_translated_timing.invert, required: true %>
         <%= form.label :timing, "タイミング" %>
@@ -30,8 +33,7 @@
   </div>
 
   <div class="modal-footer">
-    <a class="modal-action modal-close btn-flat left">Cancel
-    </a>
+    <a class="modal-action modal-close btn-flat left">Cancel</a>
 
     <% unless form.object.new_record? %>
       <%= link_to announcement, method: :delete, data: { confirm: '本当に削除してもよろしいですか？' }, class: 'btn waves-effect waves-light red left' do %>
@@ -39,7 +41,8 @@
       <% end %>
     <% end %>
 
-    <button id="submit" class="btn waves-effect waves-light right" type="submit" name="action">Save
+    <button id="submit" class="btn waves-effect waves-light right" type="submit" name="action">
+      Save
     </button>
   </div>
 <% end %>

@@ -18,11 +18,7 @@
                     <i class="material-icons circle <%= ts.priority_color %>">event</i>
                     <span class="title"><%= ts.title %></span>
                     <p>
-<<<<<<< Updated upstream
-                      <%= ts.start_at_time.to_s(:time_short) %> ~ <%= ts.end_at_time.to_s(:time_short) %>
-=======
                       <%= ts.start_from_time.to_s(:time_short) %> ~ <%= ts.deadline_time.to_s(:time_short) %>
->>>>>>> Stashed changes
                     </p>
                     <%= link_to edit_task_path(ts), remote: true, class: 'btn-floating secondary-content' do %>
                       <i class="material-icons">edit</i>

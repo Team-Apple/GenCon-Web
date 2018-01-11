@@ -44483,17 +44483,23 @@ return FC; // export for Node/CommonJS
 
 }).call(this);
 (function() {
-
-
-}).call(this);
-(function() {
   var global;
 
   global = this;
 
-  global.formalize = function() {
+  global.load_begin = function(which) {
+    return $("." + which + " .progress").fadeIn();
+  };
+
+  global.load_done = function(which) {
+    return $("." + which + " .progress").fadeOut();
+  };
+
+  global.formalize_and_open = function() {
+    var base_conf;
     $('#form').modal();
-    $('.datepicker').pickadate({
+    base_conf = {
+      container: '.main',
       selectMonths: true,
       selectYears: 8,
       format: 'yyyy-mm-dd',
@@ -44501,9 +44507,22 @@ return FC; // export for Node/CommonJS
       today: 'Today',
       clear: 'Clear',
       close: 'Ok',
-      closeOnSelect: false
+      closeOnSelect: false,
+      onSet: void 0
+    };
+    $('.datepicker').pickadate({
+      container: '.main',
+      selectMonths: true,
+      selectYears: 8,
+      format: 'yyyy-mm-dd',
+      formatSubmit: 'yyyy-mm-dd',
+      today: 'Today',
+      clear: 'Clear',
+      close: 'Ok',
+      closeOnSelect: true
     });
     $('.timepicker').pickatime({
+      container: '.main',
       "default": 'now',
       format: 'HH:ii',
       formatSubmit: 'HH:ii',
@@ -44511,11 +44530,10 @@ return FC; // export for Node/CommonJS
       donetext: 'OK',
       cleartext: 'Clear',
       canceltext: 'Cancel',
-      autoclose: false,
+      autoclose: true,
       ampmclickable: true
     });
     $('select').material_select();
-    $('#loader-bg').fadeOut();
     return $('#form').modal('open');
   };
 
