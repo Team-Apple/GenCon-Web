@@ -7,7 +7,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-
 Event.delete_all
 
 base_a = %w[彼女 友達 家族]
