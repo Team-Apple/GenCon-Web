@@ -6678,14 +6678,14 @@ nav ul a span.badge {
 }
 /* line 82, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.s1 {
-  width: 8.33333%;
+  width: 8.3333333333%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
 /* line 82, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.s2 {
-  width: 16.66667%;
+  width: 16.6666666667%;
   margin-left: auto;
   left: auto;
   right: auto;
@@ -6699,14 +6699,14 @@ nav ul a span.badge {
 }
 /* line 82, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.s4 {
-  width: 33.33333%;
+  width: 33.3333333333%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
 /* line 82, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.s5 {
-  width: 41.66667%;
+  width: 41.6666666667%;
   margin-left: auto;
   left: auto;
   right: auto;
@@ -6720,14 +6720,14 @@ nav ul a span.badge {
 }
 /* line 82, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.s7 {
-  width: 58.33333%;
+  width: 58.3333333333%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
 /* line 82, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.s8 {
-  width: 66.66667%;
+  width: 66.6666666667%;
   margin-left: auto;
   left: auto;
   right: auto;
@@ -6741,14 +6741,14 @@ nav ul a span.badge {
 }
 /* line 82, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.s10 {
-  width: 83.33333%;
+  width: 83.3333333333%;
   margin-left: auto;
   left: auto;
   right: auto;
 }
 /* line 82, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.s11 {
-  width: 91.66667%;
+  width: 91.6666666667%;
   margin-left: auto;
   left: auto;
   right: auto;
@@ -6762,27 +6762,27 @@ nav ul a span.badge {
 }
 /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.offset-s1 {
-  margin-left: 8.33333%;
+  margin-left: 8.3333333333%;
 }
 /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.pull-s1 {
-  right: 8.33333%;
+  right: 8.3333333333%;
 }
 /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.push-s1 {
-  left: 8.33333%;
+  left: 8.3333333333%;
 }
 /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.offset-s2 {
-  margin-left: 16.66667%;
+  margin-left: 16.6666666667%;
 }
 /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.pull-s2 {
-  right: 16.66667%;
+  right: 16.6666666667%;
 }
 /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.push-s2 {
-  left: 16.66667%;
+  left: 16.6666666667%;
 }
 /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.offset-s3 {
@@ -6798,27 +6798,27 @@ nav ul a span.badge {
 }
 /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.offset-s4 {
-  margin-left: 33.33333%;
+  margin-left: 33.3333333333%;
 }
 /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.pull-s4 {
-  right: 33.33333%;
+  right: 33.3333333333%;
 }
 /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.push-s4 {
-  left: 33.33333%;
+  left: 33.3333333333%;
 }
 /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.offset-s5 {
-  margin-left: 41.66667%;
+  margin-left: 41.6666666667%;
 }
 /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.pull-s5 {
-  right: 41.66667%;
+  right: 41.6666666667%;
 }
 /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.push-s5 {
-  left: 41.66667%;
+  left: 41.6666666667%;
 }
 /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.offset-s6 {
@@ -6834,27 +6834,27 @@ nav ul a span.badge {
 }
 /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.offset-s7 {
-  margin-left: 58.33333%;
+  margin-left: 58.3333333333%;
 }
 /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.pull-s7 {
-  right: 58.33333%;
+  right: 58.3333333333%;
 }
 /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.push-s7 {
-  left: 58.33333%;
+  left: 58.3333333333%;
 }
 /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.offset-s8 {
-  margin-left: 66.66667%;
+  margin-left: 66.6666666667%;
 }
 /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.pull-s8 {
-  right: 66.66667%;
+  right: 66.6666666667%;
 }
 /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.push-s8 {
-  left: 66.66667%;
+  left: 66.6666666667%;
 }
 /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.offset-s9 {
@@ -6870,27 +6870,27 @@ nav ul a span.badge {
 }
 /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.offset-s10 {
-  margin-left: 83.33333%;
+  margin-left: 83.3333333333%;
 }
 /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.pull-s10 {
-  right: 83.33333%;
+  right: 83.3333333333%;
 }
 /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.push-s10 {
-  left: 83.33333%;
+  left: 83.3333333333%;
 }
 /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.offset-s11 {
-  margin-left: 91.66667%;
+  margin-left: 91.6666666667%;
 }
 /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.pull-s11 {
-  right: 91.66667%;
+  right: 91.6666666667%;
 }
 /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.push-s11 {
-  left: 91.66667%;
+  left: 91.6666666667%;
 }
 /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
 .row .col.offset-s12 {
@@ -6907,14 +6907,14 @@ nav ul a span.badge {
 @media only screen and (min-width: 601px) {
   /* line 101, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.m1 {
-    width: 8.33333%;
+    width: 8.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
   /* line 101, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.m2 {
-    width: 16.66667%;
+    width: 16.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
@@ -6928,14 +6928,14 @@ nav ul a span.badge {
   }
   /* line 101, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.m4 {
-    width: 33.33333%;
+    width: 33.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
   /* line 101, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.m5 {
-    width: 41.66667%;
+    width: 41.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
@@ -6949,14 +6949,14 @@ nav ul a span.badge {
   }
   /* line 101, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.m7 {
-    width: 58.33333%;
+    width: 58.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
   /* line 101, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.m8 {
-    width: 66.66667%;
+    width: 66.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
@@ -6970,14 +6970,14 @@ nav ul a span.badge {
   }
   /* line 101, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.m10 {
-    width: 83.33333%;
+    width: 83.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
   /* line 101, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.m11 {
-    width: 91.66667%;
+    width: 91.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
@@ -6991,27 +6991,27 @@ nav ul a span.badge {
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-m1 {
-    margin-left: 8.33333%;
+    margin-left: 8.3333333333%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-m1 {
-    right: 8.33333%;
+    right: 8.3333333333%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-m1 {
-    left: 8.33333%;
+    left: 8.3333333333%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-m2 {
-    margin-left: 16.66667%;
+    margin-left: 16.6666666667%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-m2 {
-    right: 16.66667%;
+    right: 16.6666666667%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-m2 {
-    left: 16.66667%;
+    left: 16.6666666667%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-m3 {
@@ -7027,27 +7027,27 @@ nav ul a span.badge {
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-m4 {
-    margin-left: 33.33333%;
+    margin-left: 33.3333333333%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-m4 {
-    right: 33.33333%;
+    right: 33.3333333333%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-m4 {
-    left: 33.33333%;
+    left: 33.3333333333%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-m5 {
-    margin-left: 41.66667%;
+    margin-left: 41.6666666667%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-m5 {
-    right: 41.66667%;
+    right: 41.6666666667%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-m5 {
-    left: 41.66667%;
+    left: 41.6666666667%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-m6 {
@@ -7063,27 +7063,27 @@ nav ul a span.badge {
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-m7 {
-    margin-left: 58.33333%;
+    margin-left: 58.3333333333%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-m7 {
-    right: 58.33333%;
+    right: 58.3333333333%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-m7 {
-    left: 58.33333%;
+    left: 58.3333333333%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-m8 {
-    margin-left: 66.66667%;
+    margin-left: 66.6666666667%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-m8 {
-    right: 66.66667%;
+    right: 66.6666666667%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-m8 {
-    left: 66.66667%;
+    left: 66.6666666667%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-m9 {
@@ -7099,27 +7099,27 @@ nav ul a span.badge {
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-m10 {
-    margin-left: 83.33333%;
+    margin-left: 83.3333333333%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-m10 {
-    right: 83.33333%;
+    right: 83.3333333333%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-m10 {
-    left: 83.33333%;
+    left: 83.3333333333%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-m11 {
-    margin-left: 91.66667%;
+    margin-left: 91.6666666667%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-m11 {
-    right: 91.66667%;
+    right: 91.6666666667%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-m11 {
-    left: 91.66667%;
+    left: 91.6666666667%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-m12 {
@@ -7137,14 +7137,14 @@ nav ul a span.badge {
 @media only screen and (min-width: 993px) {
   /* line 121, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.l1 {
-    width: 8.33333%;
+    width: 8.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
   /* line 121, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.l2 {
-    width: 16.66667%;
+    width: 16.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
@@ -7158,14 +7158,14 @@ nav ul a span.badge {
   }
   /* line 121, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.l4 {
-    width: 33.33333%;
+    width: 33.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
   /* line 121, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.l5 {
-    width: 41.66667%;
+    width: 41.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
@@ -7179,14 +7179,14 @@ nav ul a span.badge {
   }
   /* line 121, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.l7 {
-    width: 58.33333%;
+    width: 58.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
   /* line 121, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.l8 {
-    width: 66.66667%;
+    width: 66.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
@@ -7200,14 +7200,14 @@ nav ul a span.badge {
   }
   /* line 121, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.l10 {
-    width: 83.33333%;
+    width: 83.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
   /* line 121, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.l11 {
-    width: 91.66667%;
+    width: 91.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
@@ -7221,27 +7221,27 @@ nav ul a span.badge {
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-l1 {
-    margin-left: 8.33333%;
+    margin-left: 8.3333333333%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-l1 {
-    right: 8.33333%;
+    right: 8.3333333333%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-l1 {
-    left: 8.33333%;
+    left: 8.3333333333%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-l2 {
-    margin-left: 16.66667%;
+    margin-left: 16.6666666667%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-l2 {
-    right: 16.66667%;
+    right: 16.6666666667%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-l2 {
-    left: 16.66667%;
+    left: 16.6666666667%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-l3 {
@@ -7257,27 +7257,27 @@ nav ul a span.badge {
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-l4 {
-    margin-left: 33.33333%;
+    margin-left: 33.3333333333%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-l4 {
-    right: 33.33333%;
+    right: 33.3333333333%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-l4 {
-    left: 33.33333%;
+    left: 33.3333333333%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-l5 {
-    margin-left: 41.66667%;
+    margin-left: 41.6666666667%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-l5 {
-    right: 41.66667%;
+    right: 41.6666666667%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-l5 {
-    left: 41.66667%;
+    left: 41.6666666667%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-l6 {
@@ -7293,27 +7293,27 @@ nav ul a span.badge {
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-l7 {
-    margin-left: 58.33333%;
+    margin-left: 58.3333333333%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-l7 {
-    right: 58.33333%;
+    right: 58.3333333333%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-l7 {
-    left: 58.33333%;
+    left: 58.3333333333%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-l8 {
-    margin-left: 66.66667%;
+    margin-left: 66.6666666667%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-l8 {
-    right: 66.66667%;
+    right: 66.6666666667%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-l8 {
-    left: 66.66667%;
+    left: 66.6666666667%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-l9 {
@@ -7329,27 +7329,27 @@ nav ul a span.badge {
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-l10 {
-    margin-left: 83.33333%;
+    margin-left: 83.3333333333%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-l10 {
-    right: 83.33333%;
+    right: 83.3333333333%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-l10 {
-    left: 83.33333%;
+    left: 83.3333333333%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-l11 {
-    margin-left: 91.66667%;
+    margin-left: 91.6666666667%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-l11 {
-    right: 91.66667%;
+    right: 91.6666666667%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-l11 {
-    left: 91.66667%;
+    left: 91.6666666667%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-l12 {
@@ -7367,14 +7367,14 @@ nav ul a span.badge {
 @media only screen and (min-width: 1201px) {
   /* line 141, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.xl1 {
-    width: 8.33333%;
+    width: 8.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
   /* line 141, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.xl2 {
-    width: 16.66667%;
+    width: 16.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
@@ -7388,14 +7388,14 @@ nav ul a span.badge {
   }
   /* line 141, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.xl4 {
-    width: 33.33333%;
+    width: 33.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
   /* line 141, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.xl5 {
-    width: 41.66667%;
+    width: 41.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
@@ -7409,14 +7409,14 @@ nav ul a span.badge {
   }
   /* line 141, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.xl7 {
-    width: 58.33333%;
+    width: 58.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
   /* line 141, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.xl8 {
-    width: 66.66667%;
+    width: 66.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
@@ -7430,14 +7430,14 @@ nav ul a span.badge {
   }
   /* line 141, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.xl10 {
-    width: 83.33333%;
+    width: 83.3333333333%;
     margin-left: auto;
     left: auto;
     right: auto;
   }
   /* line 141, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.xl11 {
-    width: 91.66667%;
+    width: 91.6666666667%;
     margin-left: auto;
     left: auto;
     right: auto;
@@ -7451,27 +7451,27 @@ nav ul a span.badge {
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-xl1 {
-    margin-left: 8.33333%;
+    margin-left: 8.3333333333%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-xl1 {
-    right: 8.33333%;
+    right: 8.3333333333%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-xl1 {
-    left: 8.33333%;
+    left: 8.3333333333%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-xl2 {
-    margin-left: 16.66667%;
+    margin-left: 16.6666666667%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-xl2 {
-    right: 16.66667%;
+    right: 16.6666666667%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-xl2 {
-    left: 16.66667%;
+    left: 16.6666666667%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-xl3 {
@@ -7487,27 +7487,27 @@ nav ul a span.badge {
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-xl4 {
-    margin-left: 33.33333%;
+    margin-left: 33.3333333333%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-xl4 {
-    right: 33.33333%;
+    right: 33.3333333333%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-xl4 {
-    left: 33.33333%;
+    left: 33.3333333333%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-xl5 {
-    margin-left: 41.66667%;
+    margin-left: 41.6666666667%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-xl5 {
-    right: 41.66667%;
+    right: 41.6666666667%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-xl5 {
-    left: 41.66667%;
+    left: 41.6666666667%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-xl6 {
@@ -7523,27 +7523,27 @@ nav ul a span.badge {
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-xl7 {
-    margin-left: 58.33333%;
+    margin-left: 58.3333333333%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-xl7 {
-    right: 58.33333%;
+    right: 58.3333333333%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-xl7 {
-    left: 58.33333%;
+    left: 58.3333333333%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-xl8 {
-    margin-left: 66.66667%;
+    margin-left: 66.6666666667%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-xl8 {
-    right: 66.66667%;
+    right: 66.6666666667%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-xl8 {
-    left: 66.66667%;
+    left: 66.6666666667%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-xl9 {
@@ -7559,27 +7559,27 @@ nav ul a span.badge {
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-xl10 {
-    margin-left: 83.33333%;
+    margin-left: 83.3333333333%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-xl10 {
-    right: 83.33333%;
+    right: 83.3333333333%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-xl10 {
-    left: 83.33333%;
+    left: 83.3333333333%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-xl11 {
-    margin-left: 91.66667%;
+    margin-left: 91.6666666667%;
   }
   /* line 47, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.pull-xl11 {
-    right: 91.66667%;
+    right: 91.6666666667%;
   }
   /* line 50, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.push-xl11 {
-    left: 91.66667%;
+    left: 91.6666666667%;
   }
   /* line 44, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/vendor/bundle/ruby/2.4.0/gems/materialize-sass-0.100.2/app/assets/stylesheets/materialize/components/_grid.scss */
   .row .col.offset-xl12 {
@@ -13547,7 +13547,7 @@ a.fc-more:hover {
   -ms-user-select: none;
   user-select: none;
   -webkit-touch-callout: none;
-  -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 /*
@@ -14495,6 +14495,15 @@ be a descendant of the grid when it is being dragged.
   padding: 10px;
 }
 
+/* line 1, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/app/assets/stylesheets/materialized_form.scss */
+.modal.bottom-sheet.btmsht-fullsized {
+  max-height: 85% !important;
+}
+/* line 4, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/app/assets/stylesheets/materialized_form.scss */
+.modal.bottom-sheet.btmsht-fullsized .modal-footer {
+  z-index: 999;
+}
+
 /* line 1, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/app/assets/stylesheets/sidenav.scss */
 li.logo {
   height: 56px;
@@ -14519,14 +14528,9 @@ a:visited {
   text-decoration: none;
 }
 
-/* line 21, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/app/assets/stylesheets/application.scss */
-#loader-bg {
+/* line 23, /Users/kitamurakai/Works/4CS/ProApp/GenCon-Web/app/assets/stylesheets/application.scss */
+.progress {
+  margin: 0px;
   display: none;
-  position: fixed;
-  width: 100%;
-  height: 130%;
-  top: 0px;
-  left: 0px;
-  background: rgba(255, 255, 255, 0.5);
   z-index: 1;
 }
