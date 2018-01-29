@@ -1,0 +1,10 @@
+<li class="collection-item avatar">
+  <i class="material-icons circle <%= task.priority_color %>">assignment</i>
+  <span class="title"><%= task.title %></span>
+  <p>
+    <%= task.deadline_time.to_s(:time_short) %> まで
+  </p>
+  <%= link_to edit_task_path(task), remote: true, class: "btn-floating secondary-content" do %>
+    <i class="material-icons">edit</i>
+  <% end %>
+</li>

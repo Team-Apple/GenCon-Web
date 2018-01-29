@@ -5,37 +5,20 @@
   <div class="col s12">
     <div class="card">
       <div class="card-content">
-        <span class="card-title activator">タスク<i class="material-icons right">settings</i></span>
-      </div>
-
-      <div class="card-stacked">
-        <div class="card-content">
+        <% unless @tasks.empty? %>
           <ul class="collection">
-            <% unless @tasks.empty? %>
-              <ul class="collection">
-                <% @tasks.each do |ts| %>
-                  <li class="collection-item avatar">
-                    <i class="material-icons circle <%= ts.priority_color %>">event</i>
-                    <span class="title"><%= ts.title %></span>
-                    <p>
-                      <%= ts.start_from_time.to_s(:time_short) %> ~ <%= ts.deadline_time.to_s(:time_short) %>
-                    </p>
-                    <%= link_to edit_task_path(ts), remote: true, class: 'btn-floating secondary-content' do %>
-                      <i class="material-icons">edit</i>
-                    <% end %>
-                  </li>
-                <% end %>
-              </ul>
+            <% @tasks.each do |ts| %>
+              <%= render 'tasks/column', task: ts %>
             <% end %>
           </ul>
-        </div>
-
-        <div class="card-action">
-          <%= link_to new_task_path, remote: true, class: 'btn waves-effect waves-light' do %>
-            NEW
-          <% end %>
-        </div>
+        <% end %>
       </div>
+    </div>
+
+    <div class="fixed-action-btn">
+      <%= link_to new_task_path, remote: true, class: "btn-floating btn-large red" do %>
+        <i class="material-icons">add</i>
+      <% end %>
     </div>
   </div>
 </div>

@@ -13,4 +13,28 @@
   <div class="col m6 s12 l6 xl6 tasks">
     <%= render 'tasks/card' %>
   </div>
+
+  <div class="fixed-action-btn click-to-toggle">
+    <a class="btn-floating btn-large red">
+      <i class="material-icons">add</i>
+    </a>
+
+    <ul>
+      <li>
+        <%= link_to new_task_path, remote: true, class: "btn-floating red" do %>
+          <i class="material-icons">assignment</i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to new_event_path, remote: true, class: "btn-floating orange" do %>
+          <i class="material-icons">event</i>
+        <% end %>
+      </li>
+      <li>
+        <%= link_to new_announcement_path, remote: true, class: "btn-floating yellow" do %>
+          <i class="material-icons">question_answer</i>
+        <% end %>
+      </li>
+    </ul>
+  </div>
 </div>

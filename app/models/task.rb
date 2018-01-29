@@ -18,25 +18,28 @@ class Task < ApplicationRecord
     next_start_tasks = two_days.where(start_from_date: start.tomorrow)
     next_deadline_tasks = two_days.where(deadline_date: start.tomorrow)
 
-    return {"current_start" => current_start_tasks, "current_deadline" => current_deadline_tasks, "next_start" => next_start_tasks, "next_deadline" => next_deadline_tasks}
+    {
+      'current_start' => current_start_tasks,
+      'current_deadline' => current_deadline_tasks,
+      'next_start' => next_start_tasks,
+      'next_deadline' => next_deadline_tasks
+    }
   end
 
   def task_cannot_be_in_the_past
-    if created_at.nil? or created_at > DateTime.current
-      if start_from_date < Date.current
-        errors.add(:start_from_date, 'cannot be in the past')
-      end
-    end
+    return unless created_at.nil? || created_at > DateTime.current
+    return unless start_from_date < Date.current
+    errors.add(:start_from_date, 'cannot be in the past')
   end
 
   def priority_color
     case priority_before_type_cast
     when 0
-      return 'green'
+      'green'
     when 1
-      return 'yellow'
+      'yellow'
     when 2
-      return 'red'
+      'red'
     end
   end
 end

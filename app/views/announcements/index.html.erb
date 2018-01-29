@@ -10,32 +10,13 @@
 
       <div class="card-stacked">
         <div class="card-content">
-          <ul class="collection">
-            <% unless @announcements.empty? %>
-              <ul class="collection">
-                <% @announcements.each do |anc| %>
-                  <% if anc.timing %>
-                    <% timing = '家を出るとき' %>
-                  <% else %>
-                    <% timing = '家に帰ったとき' %>
-                  <% end %>
-
-                  <% icon_set = Announcement.mode_icons_and_colors[anc.mode] %>
-
-                  <li class="collection-item avatar">
-                    <i class="material-icons circle <%= icon_set[1] %>"><%= icon_set[0] %></i>
-                    <span class="title"><%= Announcement.jp_translated_modes[anc.mode] %></span>
-                    <p>
-                      <%= anc.date.to_s(:date_short) %> : <%= timing %>
-                    </p>
-                    <%= link_to edit_announcement_path(anc), remote: true, class: 'btn-floating secondary-content' do %>
-                      <i class="material-icons">edit</i>
-                    <% end %>
-                  </li>
-                <% end %>
-              </ul>
-            <% end %>
-          </ul>
+          <% unless @announcements.empty? %>
+            <ul class="collection">
+              <% @announcements.each do |anc| %>
+                <%= render 'announcements/column', announce: anc %>
+              <% end %>
+            </ul>
+          <% end %>
         </div>
 
         <div class="card-action">

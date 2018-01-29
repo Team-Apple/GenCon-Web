@@ -1,10 +1,10 @@
 <%= form_with(model: @event, local: true) do |form| %>
   <% if form.object.new_record? %>
-    <% provide :form_title, "New" %>
-    <% selected = "normal" %>
-    <% field_activated = "" %>
+    <% form_title = 'New' %>
+    <% selected = 'normal' %>
+    <% field_activated = '' %>
   <% else %>
-    <% provide :form_title, "Edit" %>
+    <% form_title = 'Edit' %>
     <% flld_st_d = @event.start_at_date %>
     <% flld_st_t = @event.start_at_time.to_s(:time_short) %>
     <% flld_ed_d = @event.end_at_date %>
@@ -13,7 +13,7 @@
   <% end %>
 
   <div class="modal-content">
-    <h3><%= yield :form_title %></h3>
+    <h3><%= form_title %> event</h3>
 
     <div class="row">
       <div class="col s9 input-field">

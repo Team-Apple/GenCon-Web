@@ -15,25 +15,23 @@ class Event < ApplicationRecord
     current_events = two_days.where(start_at_date: start)
     next_events = two_days.where(start_at_date: start.tomorrow)
 
-    return {"current" => current_events, "next" => next_events}
+    { 'current' => current_events, 'next' => next_events }
   end
 
   def event_cannot_be_in_the_past
-    if created_at.nil? or created_at > DateTime.current
-      if start_at_date < Date.current
-        errors.add(:start_at_date, 'cannot be in the past')
-      end
-    end
+    return unless created_at.nil? || created_at > DateTime.current
+    return unless start_at_date < Date.current
+    errors.add(:start_at_date, 'cannot be in the past')
   end
 
   def priority_color
     case priority_before_type_cast
     when 0
-      return 'green'
+      'green'
     when 1
-      return 'yellow'
+      'yellow'
     when 2
-      return 'red'
+      'red'
     end
   end
 end

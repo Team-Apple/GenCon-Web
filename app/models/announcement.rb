@@ -4,7 +4,7 @@ class Announcement < ApplicationRecord
   validates :mode, presence: true
   validate :announcement_cannot_be_in_the_past
 
-  enum mode: { event: 0, task: 1, weather: 2, trash: 3, exchange: 4}
+  enum mode: { weather: 0, trash: 1, exchange: 2 }
 
   def self.get_two_days_announcements(start)
     two_days = Announcement.where(date: start..start.tomorrow)
@@ -12,27 +12,28 @@ class Announcement < ApplicationRecord
     current_announcements = two_days.where(date: start)
     next_announcements = two_days.where(date: start.tomorrow)
 
-    return {"current" => current_announcements, "next" => next_announcements}
+    { 'current' => current_announcements, 'next' => next_announcements }
   end
 
   def self.jp_translated_modes
-    return {"event" => "イベント", "task"=> "タスク", "weather"=> "天気", "trash"=> "ゴミ出し", "exchange"=> "為替"}
+    { 'weather' => '天気', 'trash' => 'ゴミ出し', 'exchange' => '為替' }
   end
 
   def self.jp_translated_timing
-    return {true => "家を出るとき", false => "家に帰ったとき"}
+    { true => '家を出るとき', false => '家に帰ったとき' }
   end
 
   def self.mode_icons_and_colors
-    return {"event" => ['event', 'green'], "task" => ['assignment', 'purple'], "weather" => ['wb_sunny', 'orange'], "trash" => ['whatshot', 'red'], "exchange" => ['timeline', 'yellow']}
+    {
+      'weather' => %w[wb_sunny orange],
+      'trash' => %w[whatshot red],
+      'exchange' => %w[timeline yellow]
+    }
   end
 
   def announcement_cannot_be_in_the_past
-    if created_at.nil? or created_at > DateTime.current
-      if date < Date.current
-        puts "****************past***************"
-        errors.add(:date, 'cannot be in the past')
-      end
-    end
+    return unless created_at.nil? || created_at > DateTime.current
+    return unless date < Date.current
+    errors.add(:date, 'cannot be in the past')
   end
 end

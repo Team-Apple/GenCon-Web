@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card hoverable">
   <div class="progress">
     <div class="indeterminate"></div>
   </div>
@@ -21,35 +21,17 @@
           <span>締め切り</span>
           <ul class="collection">
             <% @todays_deadline_tasks.each do |ts| %>
-              <li class="collection-item avatar">
-                <i class="material-icons circle cyan">assignments</i>
-                <span class="title"><%= ts.title %></span>
-                <p>
-                  <%= ts.deadline_time.to_s(:time_short) %> まで
-                </p>
-                <%= link_to edit_task_path(ts), remote: true, class: "btn-floating secondary-content" do %>
-                  <i class="material-icons">edit</i>
-                <% end %>
-              </li>
+              <%= render 'tasks/column', task: ts %>
             <% end %>
           </ul>
         <% end %>
 
         <% unless @todays_start_tasks.empty? %>
-        <span>開始</span>
-        <ul class="collection">
-          <% @todays_start_tasks.each do |ts| %>
-            <li class="collection-item avatar">
-              <i class="material-icons circle cyan">assignments</i>
-              <span class="title"><%= ts.title %></span>
-              <p>
-                <%= ts.start_from_time.to_s(:time_short) %> から
-              </p>
-              <%= link_to edit_task_path(ts), remote: true, class: "btn-floating secondary-content" do %>
-                <i class="material-icons">edit</i>
-              <% end %>
-            </li>
-          <% end %>
+          <span>開始</span>
+          <ul class="collection">
+            <% @todays_start_tasks.each do |ts| %>
+              <%= render 'tasks/column', task: ts %>
+            <% end %>
           </ul>
         <% end %>
       </div>
@@ -58,16 +40,7 @@
           <span>締め切り</span>
           <ul class="collection">
             <% @tomorrows_deadline_tasks.each do |ts| %>
-              <li class="collection-item avatar">
-                <i class="material-icons circle cyan">assignments</i>
-                <span class="title"><%= ts.title %></span>
-                <p>
-                  <%= ts.deadline_time.to_s(:time_short) %> まで
-                </p>
-                <%= link_to edit_task_path(ts), remote: true, class: "btn-floating secondary-content" do %>
-                  <i class="material-icons">edit</i>
-                <% end %>
-              </li>
+              <%= render 'tasks/column', task: ts %>
             <% end %>
           </ul>
         <% end %>
@@ -76,30 +49,11 @@
           <span>開始</span>
           <ul class="collection">
             <% @tomorrows_start_tasks.each do |ts| %>
-              <li class="collection-item avatar">
-                <i class="material-icons circle cyan">assignments</i>
-                <span class="title"><%= ts.title %></span>
-                <p>
-                  <%= ts.start_from_time.to_s(:time_short) %> から
-                </p>
-                <%= link_to edit_task_path(ts), remote: true, class: "btn-floating secondary-content" do %>
-                  <i class="material-icons">edit</i>
-                <% end %>
-              </li>
+              <%= render 'tasks/column', task: ts %>
             <% end %>
           </ul>
         <% end %>
       </div>
-    </div>
-
-    <div class="card-action">
-      <%= link_to new_task_path, remote: true, class: 'btn-floating waves-effect waves-light red left' do %>
-        <i class="material-icons circle">add</i>
-      <% end %>
-
-      <%= link_to tasks_path, class: 'btn-floating waves-effect waves-light grey right' do %>
-        <i class="material-icons circle">open_in_new</i>
-      <% end %>
     </div>
   </div>
 </div>

@@ -1,10 +1,10 @@
 <%= form_with(model: @task, local: true) do |form| %>
   <% if form.object.new_record? %>
-    <% provide :form_title, "New" %>
+    <% form_title = "New" %>
     <% selected = "normal" %>
     <% field_activated = "" %>
   <% else %>
-    <% provide :form_title, "Edit" %>
+    <% form_title = "Edit" %>
     <% flld_st_d = @task.start_from_date %>
     <% flld_st_t = @task.start_from_time.to_s(:time_short) %>
     <% flld_ed_d = @task.deadline_date %>
@@ -13,7 +13,11 @@
   <% end %>
 
   <div class="modal-content">
-    <h3><%= yield :form_title %></h3>
+    <h3><%= form_title %> task</h3>
+
+    <div class="row">
+
+    </div>
 
     <div class="row">
       <div class="col s9 input-field">
@@ -25,32 +29,26 @@
         <%= form.select :priority, Task.priorities.keys.to_a, required: true %>
         <%= form.label :priority, "優先度" %>
       </div>
-    </div>
 
-    <div class="row">
-      <div class="date-picker col s4">
+      <div class="date-picker col s6">
         <%= form.label :start_from_date, "開始日" %>
         <input required="required" type="date" name="task[start_from_date]" class="datepicker" value=<%= flld_st_d %> >
       </div>
-      <div class="time-picker col s4">
+      <div class="time-picker col s6">
         <%= form.label :start_from_time, "時間" %>
         <input required="required" type="time" name="task[start_from_time]" class="timepicker" value=<%= flld_st_t %> >
       </div>
-    </div>
 
-    <div class="row">
-      <div class="date-picker col s4">
+      <div class="date-picker col s6">
         <%= form.label :deadline_date, "締切日" %>
         <input required="required" type="date" name="task[deadline_date]" class="datepicker" value=<%= flld_ed_d %> >
       </div>
-      <div class="time-picker col s4">
+      <div class="time-picker col s6">
         <%= form.label :deadline_time, "時間" %>
         <input required="required" type="time" name="task[deadline_time]" class="timepicker" value=<%= flld_ed_t %> >
       </div>
-    </div>
 
-    <div class="row">
-      <div class="col s10 input-field">
+      <div class="col s12 input-field">
         <%= form.text_area :memo, :class => 'materialize-textarea' %>
         <%= form.label :memo, "メモ", class: field_activated %>
       </div>

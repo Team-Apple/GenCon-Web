@@ -1,0 +1,20 @@
+# config/app.yml for rails-settings-cached
+defaults: &defaults
+  trash_rotation:
+    0: -1
+    1: 0
+    2: 1
+    3: -1
+    4: 0
+    5: 2
+    6: -1
+  slack_notice: false
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

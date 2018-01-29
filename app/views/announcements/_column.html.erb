@@ -1,0 +1,12 @@
+<% icon_set = Announcement.mode_icons_and_colors[announce.mode] %>
+<li class="collection-item avatar">
+  <i class="material-icons circle <%= icon_set[1] %>"><%= icon_set[0] %></i>
+  <span class="title"><%= Announcement.jp_translated_modes[announce.mode] %></span>
+  <p>
+    <%= Announcement.jp_translated_timing[announce.timing] %>
+  </p>
+
+  <%= link_to edit_announcement_path(announce), remote: true, class: 'btn-floating secondary-content' do %>
+    <i class="material-icons">edit</i>
+  <% end %>
+</li>

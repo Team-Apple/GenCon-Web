@@ -10,24 +10,13 @@
 
       <div class="card-stacked">
         <div class="card-content">
-          <ul class="collection">
-            <% unless @events.empty? %>
-              <ul class="collection">
-                <% @events.each do |ev| %>
-                  <li class="collection-item avatar">
-                    <i class="material-icons circle <%= ev.priority_color %>">event</i>
-                    <span class="title"><%= ev.title %></span>
-                    <p>
-                      <%= ev.start_at_time.to_s(:time_short) %> ~ <%= ev.end_at_time.to_s(:time_short) %>
-                    </p>
-                    <%= link_to edit_event_path(ev), remote: true, class: 'btn-floating secondary-content' do %>
-                      <i class="material-icons">edit</i>
-                    <% end %>
-                  </li>
-                <% end %>
-              </ul>
-            <% end %>
-          </ul>
+          <% unless @events.empty? %>
+            <ul class="collection">
+              <% @events.each do |ev| %>
+                <%= render 'events/column', event: ev %>
+              <% end %>
+            </ul>
+          <% end %>
         </div>
 
         <div class="card-action">

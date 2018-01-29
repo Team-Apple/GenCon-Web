@@ -1,4 +1,4 @@
-<div class="card">
+<div class="card hoverable">
   <div class="progress">
     <div class="indeterminate"></div>
   </div>
@@ -20,18 +20,7 @@
         <% unless @todays_announcements.empty? %>
           <ul class="collection">
             <% @todays_announcements.each do |anc| %>
-              <% icon_set = Announcement.mode_icons_and_colors[anc.mode] %>
-              <li class="collection-item avatar">
-                <i class="material-icons circle <%= icon_set[1] %>"><%= icon_set[0] %></i>
-                <span class="title"><%= Announcement.jp_translated_modes[anc.mode] %></span>
-                <p>
-                  <%= Announcement.jp_translated_timing[anc.timing] %>
-                </p>
-
-                <%= link_to edit_announcement_path(anc), remote: true, class: 'btn-floating secondary-content' do %>
-                  <i class="material-icons">edit</i>
-                <% end %>
-              </li>
+              <%= render 'announcements/column', announce: anc %>
             <% end %>
           </ul>
         <% end %>
@@ -40,31 +29,11 @@
         <% unless @tomorrows_announcements.empty? %>
           <ul class="collection">
             <% @tomorrows_announcements.each do |anc| %>
-              <% icon_set = Announcement.mode_icons_and_colors[anc.mode] %>
-              <li class="collection-item avatar">
-                <i class="material-icons circle <%= icon_set[1] %>"><%= icon_set[0] %></i>
-                <span class="title"><%= Announcement.jp_translated_modes[anc.mode] %></span>
-                <p>
-                  <%= Announcement.jp_translated_timing[anc.timing] %>
-                </p>
-                <%= link_to edit_announcement_path(anc), remote: true, class: 'btn-floating secondary-content' do %>
-                  <i class="material-icons">edit</i>
-                <% end %>
-              </li>
+              <%= render 'announcements/column', announce: anc %>
             <% end %>
           </ul>
         <% end %>
       </div>
-    </div>
-
-    <div class="card-action">
-      <%= link_to new_announcement_path, remote: true, class: 'btn-floating waves-effect waves-light red left' do %>
-        <i class="material-icons circle">add</i>
-      <% end %>
-
-      <%= link_to announcements_path, class: 'btn-floating waves-effect waves-light grey right' do %>
-        <i class="material-icons circle">open_in_new</i>
-      <% end %>
     </div>
   </div>
 </div>

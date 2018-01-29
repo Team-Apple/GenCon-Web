@@ -1,0 +1,10 @@
+<li class="collection-item avatar">
+  <i class="material-icons circle <%= event.priority_color %>">event</i>
+  <span class="title"><%= event.title %></span>
+  <p>
+    <%= event.start_at_time.to_s(:time_short) %> ~ <%= event.end_at_time.to_s(:time_short) %>
+  </p>
+  <%= link_to edit_event_path(event), remote: true, class: 'btn-floating secondary-content' do %>
+    <i class="material-icons">edit</i>
+  <% end %>
+</li>
