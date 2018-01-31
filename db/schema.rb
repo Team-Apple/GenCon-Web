@@ -10,10 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180129151405) do
+ActiveRecord::Schema.define(version: 20180131111418) do
 
   create_table "announcements", force: :cascade do |t|
-    t.date "date"
     t.boolean "timing", default: true
     t.integer "mode", default: 0
     t.datetime "created_at", null: false

@@ -8,7 +8,7 @@
         <% unless @tasks.empty? %>
           <ul class="collection">
             <% @tasks.each do |ts| %>
-              <%= render 'tasks/column', task: ts %>
+              <%= render 'tasks/column', task: ts, mode: 3 %>
             <% end %>
           </ul>
         <% end %>

@@ -2,7 +2,15 @@
   <i class="material-icons circle <%= task.priority_color %>">assignment</i>
   <span class="title"><%= task.title %></span>
   <p>
-    <%= task.deadline_time.to_s(:time_short) %> まで
+    <% case mode %>
+    <% when 0 %>
+      <%= task.start_from_time.to_s(:time_short) %> から
+    <% when 1 %>
+      <%= task.deadline_time.to_s(:time_short) %> まで
+    <% else %>
+      <%= task.start_from_date.to_s(:date_short) %> <%= task.start_from_time.to_s(:time_short) %> から <br>
+      <%= task.deadline_date.to_s(:date_short) %> <%= task.deadline_time.to_s(:time_short) %> まで
+    <% end %>
   </p>
   <%= link_to edit_task_path(task), remote: true, class: "btn-floating secondary-content" do %>
     <i class="material-icons">edit</i>

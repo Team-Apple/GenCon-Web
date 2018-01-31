@@ -8,32 +8,13 @@
   </div>
 
   <div class="card-stacked">
-    <div class="card-tabs">
-      <ul class="tabs tabs-fixed-width">
-        <li class="tab"><a href="#todays_announce">今日</a></li>
-        <li class="tab"><a href="#tomorrows_announce">明日</a></li>
-      </ul>
-    </div>
-
     <div class="card-content">
-      <div id="todays_announce">
-        <% unless @todays_announcements.empty? %>
-          <ul class="collection">
-            <% @todays_announcements.each do |anc| %>
-              <%= render 'announcements/column', announce: anc %>
-            <% end %>
-          </ul>
+      <ul class="collection">
+        <% @announcements.each do |anc| %>
+          <% break if @announcements.nil? %>
+          <%= render 'announcements/column', announce: anc %>
         <% end %>
-      </div>
-      <div id="tomorrows_announce">
-        <% unless @tomorrows_announcements.empty? %>
-          <ul class="collection">
-            <% @tomorrows_announcements.each do |anc| %>
-              <%= render 'announcements/column', announce: anc %>
-            <% end %>
-          </ul>
-        <% end %>
-      </div>
+      </ul>
     </div>
   </div>
 </div>

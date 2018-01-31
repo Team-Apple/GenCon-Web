@@ -21,7 +21,7 @@
           <span>締め切り</span>
           <ul class="collection">
             <% @todays_deadline_tasks.each do |ts| %>
-              <%= render 'tasks/column', task: ts %>
+              <%= render 'tasks/column', task: ts, mode: 0 %>
             <% end %>
           </ul>
         <% end %>
@@ -30,7 +30,7 @@
           <span>開始</span>
           <ul class="collection">
             <% @todays_start_tasks.each do |ts| %>
-              <%= render 'tasks/column', task: ts %>
+              <%= render 'tasks/column', task: ts, mode: 1 %>
             <% end %>
           </ul>
         <% end %>
@@ -40,7 +40,7 @@
           <span>締め切り</span>
           <ul class="collection">
             <% @tomorrows_deadline_tasks.each do |ts| %>
-              <%= render 'tasks/column', task: ts %>
+              <%= render 'tasks/column', task: ts, mode: 0 %>
             <% end %>
           </ul>
         <% end %>
@@ -49,7 +49,7 @@
           <span>開始</span>
           <ul class="collection">
             <% @tomorrows_start_tasks.each do |ts| %>
-              <%= render 'tasks/column', task: ts %>
+              <%= render 'tasks/column', task: ts, mode: 1 %>
             <% end %>
           </ul>
         <% end %>

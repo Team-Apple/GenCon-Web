@@ -1,8 +1,6 @@
 class DashboardController < ApplicationController
   def home
-    two_days_announcement = Announcement.get_two_days_announcements(Date.current)
-    @todays_announcements = two_days_announcement["current"]
-    @tomorrows_announcements = two_days_announcement["next"]
+    @announcements = Announcement.all
 
     two_days_events = Event.get_two_days_events(Date.current)
     @todays_events = two_days_events["current"]

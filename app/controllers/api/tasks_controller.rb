@@ -7,6 +7,8 @@ class Api::TasksController < ApplicationController
   def index
     if params['start_from_date']
       @tasks = Task.where(start_from_date: params['start_from_date'])
+    elsif params['deadline_date']
+      @tasks = Task.where(deadline_data: params['deadline_date'])
     else
       @tasks = Task.all
     end

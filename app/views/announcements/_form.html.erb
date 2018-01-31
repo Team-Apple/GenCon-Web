@@ -5,7 +5,6 @@
     <% field_activated = "" %>
   <% else %>
     <% provide :form_title, "Edit" %>
-    <% flld_d = @announcement.date %>
     <% slctd_mode = @announcement.mode %>
     <% field_activated = "active" %>
   <% end %>
@@ -14,18 +13,11 @@
     <h3><%= yield :form_title %></h3>
 
     <div class="row">
-      <div class="date-picker col s4">
-        <%= form.label :date, "日付" %>
-        <input required="required" type="date" name="announcement[date]" class="datepicker" value=<%= flld_d %> >
-      </div>
-    </div>
-
-    <div class="row">
-      <div class="col s3 input-field">
+      <div class="col s12 m3 l3 xl3 input-field">
         <%= form.select :timing, Announcement.jp_translated_timing.invert, required: true %>
         <%= form.label :timing, "タイミング" %>
       </div>
-      <div class="col s3 input-field">
+      <div class="col s12 m3 l3 xl3 input-field">
         <%= form.select :mode, Announcement.jp_translated_modes.invert, required: true %>
         <%= form.label :mode, "内容" %>
       </div>
