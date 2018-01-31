@@ -1,7 +1,6 @@
 class Announcement < ApplicationRecord
   validates :timing, inclusion: { in: [true, false] }
   validates :mode, presence: true
-  validate :announcement_cannot_be_in_the_past
 
   enum mode: { weather: 0, trash: 1, exchange: 2 }
 
