@@ -8,7 +8,8 @@ defaults: &defaults
     4: 0
     5: 2
     6: -1
-  slack_notice: false
+  exchange_before: 'USD'
+  exchange_after: 'JPY'
 
 development:
   <<: *defaults

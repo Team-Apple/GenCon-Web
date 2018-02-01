@@ -1,0 +1,16 @@
+<table class="centered">
+  <thead>
+    <tr>
+      <% hash.each_key do |key| %>
+        <th><%= Setting.jp_translated_days[key] %></th>
+      <% end %>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <% hash.each_value do |value| %>
+        <td><%= Setting.languaged_trash_kinds[value] %></td>
+      <% end %>
+    </tr>
+  </tbody>
+</table>

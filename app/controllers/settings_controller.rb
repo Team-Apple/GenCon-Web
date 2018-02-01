@@ -2,6 +2,10 @@ class SettingsController < ApplicationController
   before_action :set_setting, only: %i[edit update]
   around_action :render_form, only: :edit
 
+  def index
+    @settings = Setting.get_all
+  end
+
   def edit; end
 
   def update
