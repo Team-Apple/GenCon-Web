@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
-  before_action :set_event, only: [:show, :edit, :update, :destroy]
-  around_action :render_form, only: [:new, :edit]
+  before_action :set_event, only: %i[show edit update destroy]
+  around_action :render_form, only: %i[new edit]
 
   # GET /events
   # GET /events.json
@@ -20,8 +20,7 @@ class EventsController < ApplicationController
   end
 
   # GET /events/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /events
   # POST /events.json

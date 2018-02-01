@@ -5,11 +5,7 @@ class Api::AnnouncementsController < ApplicationController
   # GET /announcements
   # GET /announcements.json
   def index
-    if params['date']
-      @announcements = Announcement.where(date: params['date'])
-    else
-      @announcements = Announcement.all
-    end
+    @announcements = Announcement.all
 
     respond_to do |format|
       format.html { render html: '200' }
