@@ -6,14 +6,27 @@
 <% @settings.each_key do |key| %>
   <div class="card hoverable s6">
     <div class="card-content">
-      <span class="card-title"><%= Setting.jp_translated_settings[key] %></span>
-      <%= link_to edit_setting_path(key) %>
+      <span class="card-title activator">
+        <%= Setting.jp_translated_settings[key] %>
+        <i class="material-icons right">edit</i>
+      </span>
     </div>
     <div class="card-content">
       <% if @settings[key].is_a? Hash %>
         <%= render 'table_hash', hash: @settings[key] %>
       <% else %>
         <%= @settings[key] %>
+      <% end %>
+    </div>
+    <div class="card-reveal">
+      <span class="card-title">
+        編集
+        <i class="material-icons right">close</i>
+      </span>
+      <% if @settings[key].is_a? Hash %>
+        <%= render 'edit_table_hash', hash: @settings[key], key: key %>
+      <% else %>
+        <%= render 'edit', setting: @settings[key] %>
       <% end %>
     </div>
   </div>

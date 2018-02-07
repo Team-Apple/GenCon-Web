@@ -1,8 +1,12 @@
-<table class="centered">
+<table class="materialized centered responsive-table">
   <thead>
     <tr>
       <% hash.each_key do |key| %>
-        <th><%= Setting.jp_translated_days[key] %></th>
+      <th>
+        <div class="chip">
+          <%= Setting.languaged_days[key] %>
+        </div>
+      </th>
       <% end %>
     </tr>
   </thead>

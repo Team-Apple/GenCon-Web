@@ -1,6 +1,7 @@
+# frozen_string_literal: true
+
 class SettingsController < ApplicationController
   before_action :set_setting, only: %i[edit update]
-  around_action :render_form, only: :edit
 
   def index
     @settings = Setting.get_all
@@ -9,12 +10,22 @@ class SettingsController < ApplicationController
   def edit; end
 
   def update
-    if @setting.value != params[:setting][:value]
-      @setting.value = params[:setting][:value]
+    result =
+      if params[:id] == 'trash_rotation'
+        new_rotation = {}
+        (0..6).to_a.each do |day|
+          new_rotation.store(day, params[:trash_rotation][day])
+        end
+        p new_rotation
+        new_rotation
+      else
+        params[:setting][:value]
+      end
+    if @setting.value != result
+      @setting.value = result
       @setting.save
-    else
-      redirect_to dashboard_home_path
     end
+    redirect_to settings_path
   end
 
   private

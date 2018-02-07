@@ -29,15 +29,15 @@ class Setting < RailsSettings::Base
     }
   end
 
-  def self.jp_translated_days
+  def self.languaged_days
     {
-      0 => '日曜日',
-      1 => '月曜日',
-      2 => '火曜日',
-      3 => '水曜日',
-      4 => '木曜日',
-      5 => '金曜日',
-      6 => '土曜日'
+      0 => 'Sun',
+      1 => 'Mon',
+      2 => 'Tue',
+      3 => 'Wed',
+      4 => 'Thu',
+      5 => 'Fri',
+      6 => 'Sat'
     }
   end
 end
