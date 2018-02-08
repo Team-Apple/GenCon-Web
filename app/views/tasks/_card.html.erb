@@ -17,7 +17,7 @@
 
     <div class="card-content">
       <div id="todays_tasks">
-        <% unless @todays_deadline_tasks.empty? %>
+        <% unless @todays_deadline_tasks.nil? %>
           <span>締め切り</span>
           <ul class="collection">
             <% @todays_deadline_tasks.each do |ts| %>
@@ -26,7 +26,7 @@
           </ul>
         <% end %>
 
-        <% unless @todays_start_tasks.empty? %>
+        <% unless @todays_start_tasks.nil? %>
           <span>開始</span>
           <ul class="collection">
             <% @todays_start_tasks.each do |ts| %>
@@ -36,7 +36,7 @@
         <% end %>
       </div>
       <div id="tomorrows_tasks">
-        <% unless @tomorrows_deadline_tasks.empty? %>
+        <% unless @tomorrows_deadline_tasks.nil? %>
           <span>締め切り</span>
           <ul class="collection">
             <% @tomorrows_deadline_tasks.each do |ts| %>
@@ -45,7 +45,7 @@
           </ul>
         <% end %>
 
-        <% unless @tomorrows_start_tasks.empty? %>
+        <% unless @tomorrows_start_tasks.nil? %>
           <span>開始</span>
           <ul class="collection">
             <% @tomorrows_start_tasks.each do |ts| %>

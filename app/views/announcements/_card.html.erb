@@ -9,12 +9,13 @@
 
   <div class="card-stacked">
     <div class="card-content">
-      <ul class="collection">
-        <% @announcements.each do |anc| %>
-          <% break if @announcements.nil? %>
-          <%= render 'announcements/column', announce: anc %>
-        <% end %>
-      </ul>
+      <% unless @announcements.nil? %>
+        <ul class="collection">
+          <% @announcements.each do |anc| %>
+            <%= render 'announcements/column', announce: anc %>
+          <% end %>
+        </ul>
+      <% end %>
     </div>
   </div>
 </div>

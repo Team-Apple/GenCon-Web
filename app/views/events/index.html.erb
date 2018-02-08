@@ -10,7 +10,7 @@
 
       <div class="card-stacked">
         <div class="card-content">
-          <% unless @events.empty? %>
+          <% unless @events.nil? %>
             <ul class="collection">
               <% @events.each do |ev| %>
                 <%= render 'events/column', event: ev %>

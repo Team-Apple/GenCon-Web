@@ -8,7 +8,7 @@
         <span class="card-title activator">タスク</span>
       </div>
       <div class="card-content">
-        <% unless @tasks.empty? %>
+        <% unless @tasks.nil? %>
           <ul class="collection">
             <% @tasks.each do |ts| %>
               <%= render 'tasks/column', task: ts, mode: 3 %>

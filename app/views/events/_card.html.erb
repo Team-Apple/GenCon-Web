@@ -17,7 +17,7 @@
 
     <div class="card-content">
       <div id="todays_events">
-        <% unless @todays_events.empty? %>
+        <% unless @todays_events.nil? %>
           <ul class="collection">
             <% @todays_events.each do |ev| %>
               <%= render 'events/column', event: ev %>
@@ -26,7 +26,7 @@
         <% end %>
       </div>
       <div id="tomorrows_events">
-        <% unless @tomorrows_events.empty? %>
+        <% unless @tomorrows_events.nil? %>
           <ul class="collection">
             <% @tomorrows_events.each do |ev| %>
               <%= render 'events/column', event: ev %>

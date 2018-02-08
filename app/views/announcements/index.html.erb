@@ -10,7 +10,7 @@
 
       <div class="card-stacked">
         <div class="card-content">
-          <% unless @announcements.empty? %>
+          <% unless @announcements.nil? %>
             <ul class="collection">
               <% @announcements.each do |anc| %>
                 <%= render 'announcements/column', announce: anc %>
