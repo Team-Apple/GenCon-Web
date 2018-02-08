@@ -10,17 +10,8 @@ class SettingsController < ApplicationController
   def edit; end
 
   def update
-    result =
-      if params[:id] == 'trash_rotation'
-        new_rotation = {}
-        (0..6).to_a.each do |day|
-          new_rotation.store(day, params[:trash_rotation][day])
-        end
-        p new_rotation
-        new_rotation
-      else
-        params[:setting][:value]
-      end
+    return if params[:value].nil?
+    result = params[:value]
     if @setting.value != result
       @setting.value = result
       @setting.save

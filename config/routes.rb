@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     resources :announcements
     resources :tasks
     get '/settings/trash', to: 'settings#todays_trash'
+    get '/settings/exchange', to: 'settings#exchange'
   end
 
   resources :events

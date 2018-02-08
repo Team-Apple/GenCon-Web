@@ -19,15 +19,21 @@
       <% end %>
     </div>
     <div class="card-reveal">
-      <span class="card-title">
-        編集
-        <i class="material-icons right">close</i>
+      <span class="card-title" onclick="$('form.<%= key %>').submit()">
+        編集/保存
+        <i class="material-icons right">send</i>
       </span>
       <% if @settings[key].is_a? Hash %>
         <%= render 'edit_table_hash', hash: @settings[key], key: key %>
-      <% else %>
-        <%= render 'edit', setting: @settings[key] %>
+      <% elsif key == 'exchange_before' %>
+        <%= render 'edit_exchange', key: key, selects: Setting.currencies, selected: @settings[key] %>
+      <% elsif key == 'exchange_after' %>
+        <%= render 'edit_exchange', key: key, selects: Setting.base_currencies, selected: @settings[key] %>
       <% end %>
     </div>
   </div>
+<% end %>
+
+<%= coffee_script_tag do %>
+  $(document).on 'turbolinks:load', () -> $('select').material_select()
 <% end %>

@@ -5,12 +5,22 @@ class Setting < RailsSettings::Base
   source Rails.root.join('config/app.yml')
   namespace Rails.env
 
-  def self.languaged_trash_kinds
+  def self.currencies
     {
-      -1 => 'なし',
-      0 => '一般ゴミ',
-      1 => '資源ゴミ',
-      2 => '容器包装プラゴミ'
+      'USD' => 'USD',
+      'EUR' => 'EUR',
+      'AUD' => 'AUD',
+      'GBP' => 'GBP',
+      'CAD' => 'CAD',
+      'CHF' => 'CHF',
+      'CNH' => 'CNH'
+    }
+  end
+
+  def self.base_currencies
+    {
+      'JPY_T' => 'JPY_T',
+      'BTC_T' => 'BTC_T'
     }
   end
 
@@ -31,13 +41,13 @@ class Setting < RailsSettings::Base
 
   def self.languaged_days
     {
-      0 => 'Sun',
-      1 => 'Mon',
-      2 => 'Tue',
-      3 => 'Wed',
-      4 => 'Thu',
-      5 => 'Fri',
-      6 => 'Sat'
+      0 => '日',
+      1 => '月',
+      2 => '火',
+      3 => '水',
+      4 => '木',
+      5 => '金',
+      6 => '土'
     }
   end
 end

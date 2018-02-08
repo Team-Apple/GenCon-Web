@@ -1,4 +1,4 @@
-<%= form_tag('/settings/trash_rotation', method: :patch, authenticity_token: true) do |f| %>
+<%= form_tag('/settings/trash_rotation', method: :patch, authenticity_token: true, class: "#{key}") do |f| %>
   <table class="materialized centered responsive-table">
     <thead>
       <tr>
@@ -14,10 +14,8 @@
     <tbody>
       <tr>
         <% hash.each_with_index do |val, day| %>
-          <td>
-            <%= select_tag "trash_rotation[#{day}]",
-              options_for_select(Setting.languaged_trash_kinds.invert)
-            %>
+          <td class="input-field">
+            <%= text_field_tag "value[#{day}]", val[1], required: true %>
           </td>
         <% end %>
       </tr>

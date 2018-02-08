@@ -1,0 +1,4 @@
+<%= form_tag("settings/#{key}", method: :patch, authenticity_token: true, class: "#{key}") do |f| %>
+  <%= select_tag :value,
+    options_for_select(selects, selected: selected) %>
+<% end %>
